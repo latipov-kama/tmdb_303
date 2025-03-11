@@ -273,12 +273,6 @@ header {
 	}
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .popular-persons {
   margin-bottom: 40px;
 }
@@ -398,10 +392,6 @@ header {
 
 
 
-.expected-movies {
-  max-width: 1100px;
-  margin: 0 auto;
-}
 
 .header {
   display: flex;
