@@ -1,13 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/src/style.css" />
+		<title>Kinoarea</title>
+	</head>
+
+	<body>
+		<img class="main-img" src="/background-img.svg" alt="" />
+
+		<header class="container">
+			<div class="logo">
+				<img src="/logo.svg" alt="" />
+				<img src="/social-links.svg" alt="" />
+			</div>
+
+			<nav>
+				<a href="">Афиша</a>
+				<a href="">Медиа</a>
+				<a href="">Фильмы</a>
+				<a href="">Актёры</a>
+				<a href="">Новости</a>
+				<a href="">Подборки</a>
+				<a href="">Категории</a>
+			</nav>
+
+			<div class="btns">
+				<button class="search">
+					<img src="/search-vector.svg" alt="" />
+				</button>
+				<button class="sign-in">Войти</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="now-in-cinema container">
+				<div class="movies-filter">
+					<h1>Сейчас в кино</h1>
+					<span class="line"></span>
+
+					<div class="categories">
+						<a href="">Все</a>
+						<a href="">Боевики</a>
+						<a href="">Приключения</a>
+						<a href="">Комедии</a>
+						<a href="">Фанастика</a>
+						<a href="">Триллеры</a>
+						<a href="">Драма</a>
+					</div>
+				</div>
+
+				<div class="movies-grind container">
+					<div class="movie-card">
+						<div class="img_box">
+							<img src="/image-1.svg" alt="" />
+						</div>
+						<h3>Побег из Претории</h3>
+						<p>Триллер</p>
+						<span class="rating">6.70</span>
+						<div class="movie-overlay">Карточка фильма</div>
+					</div>
+					<div class="movie-card">
+						<div class="img_box">
+							<img src="/image-2.svg" alt="" />
+						</div>
+						<h3>Джокер</h3>
+						<p>Триллер, драма, криминал</p>
+						<span class="rating green">8.50</span>
+						<div class="movie-overlay">Карточка фильма</div>
+					</div>
+					<div class="movie-card">
+						<div class="img_box">
+							<img src="/image-3.svg" alt="" />
+						</div>
+						<h3>Звёздные войны: Скайуокер. Восход</h3>
+						<p>Фантастика, фэнтези, боевик, приключения</p>
+						<span class="rating">6.70</span>
+						<div class="movie-overlay">Карточка фильма</div>
+					</div>
+					<div class="movie-card">
+						<div class="img_box">
+							<img src="/image-4.svg" alt="" />
+						</div>
+						<h3>Джентльмены</h3>
+						<p>Боевик, комедия, криминал</p>
+						<span class="rating green">8.00</span>
+						<div class="movie-overlay">Карточка фильма</div>
+					</div>
+					<div class="movie-card">
+						<div class="img_box">
+							<img src="/image-5.svg" alt="" />
+						</div>
+						<h3>Ford против Ferrari</h3>
+						<p>Биография, спорт, драма, боевик</p>
+						<span class="rating green">8.10</span>
+						<div class="movie-overlay">Карточка фильма</div>
+					</div>
+					<div class="movie-card">
+						<div class="img_box">
+							<img src="/image-6.svg" alt="" />
+						</div>
+						<h3>3022</h3>
+						<p>Фантастика, триллер</p>
+						<span class="rating red">4.90</span>
+						<div class="movie-overlay">Карточка фильма</div>
+					</div>
+					<div class="movie-card">
+						<div class="img_box">
+							<img src="/image-7.svg" alt="" />
+						</div>
+						<h3>Хищные птицы: Потрясающая история Харли Квинн</h3>
+						<p>Боевик, криминал, комедия</p>
+						<span class="rating">6.20</span>
+						<div class="movie-overlay">Карточка фильма</div>
+					</div>
+					<div class="movie-card">
+						<div class="img_box">
+							<img src="/image-8.svg" alt="" />
+						</div>
+						<h3>Плохие парни навсегда</h3>
+						<p>Боевик, комедия, криминал</p>
+						<span class="rating">6.90</span>
+						<div class="movie-overlay">Карточка фильма</div>
+					</div>
+				</div>
+				<button class="view-all">Все новинки</button>
+			</section>
+		</main>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
 </html>
