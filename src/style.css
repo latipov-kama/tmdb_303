@@ -1,26 +1,164 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-}
-
-body {
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #1e2538;
+  padding: 0 245px;
+}
+.new-trailers {
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 79px;
+}
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-weight: 900;
+    font-size: 65px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    img {
+      width: 30px;
+      height: 26px;
+    }
+    p {
+      font-weight: 700;
+      font-size: 22px;
+    }
+  }
+}
+.trailer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    border-radius: 10px;
+  }
+  .trailer-name {
+    display: flex;
+    gap: 34px;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .message {
+      display: flex;
+      gap: 17px;
+      img {
+        width: 17px;
+        height: 17px;
+      }
+    }
+    h1 {
+      font-weight: 900;
+      font-size: 45px;
+    }
+    .trailer-like {
+      display: flex;
+      align-items: start;
+      gap: 8px;
+      .like,
+      .deslike {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        div {
+          padding: 16px 12px 16px 20px;
+          background-color: #1b2133;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.films {
+  display: flex;
+  gap: 20px;
+  padding-top: 43px;
+  overflow: scroll;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    p {
+      font-weight: 900;
+      font-size: 20px;
+    }
+  }
+}
+.popular-films {
+  padding-top: 75px;
+  .texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .tire {
+      width: 52px;
+      border: 2px solid #ffffff;
+      border-radius: 2px;
+    }
+    .time {
+      display: flex;
+      gap: 20px;
+      p {
+        font-weight: 700;
+        font-size: 18px;
+        color: gray;
+        cursor: pointer;
+      }
+    }
+    h1 {
+      font-weight: 900;
+      font-size: 65px;
+    }
+  }
+  .top-films {
+    display: flex;
+    gap: 22px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      position: relative;
+    }
+    .grade {
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #4bcb36;
+      position: absolute;
+      right: 12px;
+      top: 12px;
+    }
+    p {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    span {
+      font-weight: 400;
+      font-size: 15px;
+      color: #F2F60F;
+    }
+    img {
+      border-radius: 15px;
+    }
+  }
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.texts .time p:hover {
+  color: white;
 }
