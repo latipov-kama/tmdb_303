@@ -9,13 +9,13 @@ const getPopular = api.get("movie/popular");
 
 document.addEventListener("DOMContentLoaded", () => {
 const moviesContainer = document.querySelector('.movies-grind');
-// const container = document.querySelector(".movies-grid");
+const container = document.querySelector(".movies-grid");
 
     Promise.all([getNowPlaying, getPopular])
     .then(([nowPlaying, popular]) => {
         console.log(nowPlaying);
         render(nowPlaying.data.results, moviesContainer, Movies);
-        // render(popular.data.results, container, Movie); 
+        render(popular.data.results, container, Movies);
     })
     .catch(err => console.error(err));
 })

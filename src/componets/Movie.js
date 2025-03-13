@@ -9,11 +9,11 @@ export function Movies(movie) {
     img.src = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : "/placeholder.svg";
     img.alt = movie.title;
 
-    let backdrop_img = document.createElement('img')
-    backdrop_img.classList.add('main-img')
-    backdrop_img.onmouseenter = () => {
-        img.src = movie.backdrop_path ? `https://image.tmdb.org/t/p/w900${movie.backdrop_path}` : "/placeholder.svg";
-    }
+    // let backdrop_img = document.createElement('img')
+    // backdrop_img.classList.add('main-img')
+    // backdrop_img.onmouseenter = () => {
+    //     img.src = movie.backdrop_path ? `https://image.tmdb.org/t/p/w900${movie.backdrop_path}` : "/placeholder.svg";
+    // }
 
     imgBox.appendChild(img);
 
