@@ -32,10 +32,12 @@
     img {
       width: 30px;
       height: 26px;
+      cursor: pointer;
     }
     p {
       font-weight: 700;
       font-size: 22px;
+      cursor: pointer;
     }
   }
 }
@@ -137,6 +139,7 @@
   .top-films {
     display: flex;
     gap: 22px;
+    overflow: scroll;
     div {
       display: flex;
       flex-direction: column;
@@ -162,6 +165,7 @@
     }
     img {
       border-radius: 15px;
+      cursor: pointer;
     }
   }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import axios from "axios";
 
 let access_token =
@@ -13,17 +12,4 @@ export const api = axios.create({
 		language: "ru-RU"
 	}
 });
-=======
-import axios from "axios";
 
-let access_token =
-	"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MDExNmY3NmEwZWJjNTQ3NzE5ZTg1NmQ4NmQ5MmY5ZSIsIm5iZiI6MTcxNDgyMzc0MC41MTUsInN1YiI6IjY2MzYyMjNjNDcwZWFkMDEyMjEyM2UxZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._dZgv2Hqi1IYYtLagRsb_8ELuqQz2_-Ov9-4VnqTTH8";
-
-export const api = axios.create({
-	baseURL: "https://api.themoviedb.org/3",
-	headers: {
-		Authorization: `Bearer ${access_token}`,
-	},
-});
-
->>>>>>> e26dd57ec0b97166869f5342264e41c5325397ec
