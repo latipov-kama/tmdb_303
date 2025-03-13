@@ -1,258 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/src/style.css" />
-		<title>Kinoarea</title>
-	</head>
 
-	<body>
-		<img class="main-img" src="/background-img.svg" alt="" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/style.css" />
+	<title>Kinoarea</title>
+</head>
 
-		<header class="container">
-			<div class="logo">
-				<img src="/logo.svg" alt="" />
-				<img src="/social-links.svg" alt="" />
+<body>
+	<img class="main-img" src="/background-img.svg" alt="" />
+
+	<header class="container">
+		<div class="logo">
+			<img src="/logo.svg" alt="" />
+			<img src="/social-links.svg" alt="" />
+		</div>
+
+		<nav>
+			<a href="">Афиша</a>
+			<a href="">Медиа</a>
+			<a href="">Фильмы</a>
+			<a href="">Актёры</a>
+			<a href="">Новости</a>
+			<a href="">Подборки</a>
+			<a href="">Категории</a>
+		</nav>
+
+		<div class="btns">
+			<button class="search">
+				<img src="/search-vector.svg" alt="" />
+			</button>
+			<button class="sign-in">Войти</button>
+		</div>
+	</header>
+
+	<main>
+		<section class="now-in-cinema container">
+			<div class="movies-filter">
+				<h1>Сейчас в кино</h1>
+				<span class="line"></span>
+
+				<div class="categories">
+					<a href="">Все</a>
+					<a href="">Боевики</a>
+					<a href="">Приключения</a>
+					<a href="">Комедии</a>
+					<a href="">Фанастика</a>
+					<a href="">Триллеры</a>
+					<a href="">Драма</a>
+				</div>
 			</div>
 
-			<nav>
-				<a href="">Афиша</a>
-				<a href="">Медиа</a>
-				<a href="">Фильмы</a>
-				<a href="">Актёры</a>
-				<a href="">Новости</a>
-				<a href="">Подборки</a>
-				<a href="">Категории</a>
-			</nav>
+			<div class="movies-grind container"> </div>
+			<button class="view-all">Все новинки</button>
+		</section>
 
-			<div class="btns">
-				<button class="search">
-					<img src="/search-vector.svg" alt="" />
-				</button>
-				<button class="sign-in">Войти</button>
+		<section class="popular-persons container">
+			<h2>Популярные персоны</h2>
+			<div class="persons-wrapper">
+				<div class="person">
+					<span class="rank">1-е место</span>
+					<img src="./src/img/Квентин Тарантино.jpg" alt="Квентин Тарантино" />
+					<div class="person-info">
+						<p class="name">Квентин Тарантино</p>
+						<p class="original-name">Quentin Tarantino</p>
+						<p class="age">57 лет</p>
+					</div>
+				</div>
+				<div class="person">
+					<span class="rank">2-е место</span>
+					<img src="./src/img/stetham2.jpg" alt="Джейсон Стэйтем" />
+					<div class="person-info">
+						<p class="name">Джейсон Стэйтем</p>
+						<p class="original-name">Jason Statham</p>
+						<p class="age">54 года</p>
+					</div>
+				</div>
+				<div class="persons-list">
+					<ul>
+						<li>
+							<div class="list-info">
+								<p class="others-name">Тьерри Лермитт</p>
+								<p class="org-name">Tinto Brass</p>
+								<p class="age">67 лет</p>
+							</div>
+							<span class="place">3-е место</span>
+						</li>
+						<li>
+							<div class="list-info">
+								<p class="others-name">Джеки Чан</p>
+								<p class="org-name">Jackie Chan</p>
+								<p class="age">68 лет</p>
+							</div>
+							<span class="place">4-е место</span>
+						</li>
+						<li>
+							<div class="list-info">
+								<p class="others-name">Том Харди</p>
+								<p class="org-name">Tom Hardy</p>
+								<p class="age">46 лет</p>
+							</div>
+							<span class="place">5-е место</span>
+						</li>
+						<li>
+							<div class="list-info">
+								<p class="others-name">Анна Кендрик</p>
+								<p class="org-name">Akshay Kumar</p>
+								<p class="age">38 лет</p>
+							</div>
+							<span class="place">6-е место</span>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</header>
+		</section>
 
-		<main>
-			<section class="now-in-cinema container">
-				<div class="movies-filter">
-					<h1>Сейчас в кино</h1>
-					<span class="line"></span>
-
-					<div class="categories">
-						<a href="">Все</a>
-						<a href="">Боевики</a>
-						<a href="">Приключения</a>
-						<a href="">Комедии</a>
-						<a href="">Фанастика</a>
-						<a href="">Триллеры</a>
-						<a href="">Драма</a>
-					</div>
+		<section class="expected-movies container">
+			<div class="header">
+				<h2>Ожидаемые новинки</h2>
+				<div class="arrows">
+					<button class="btn-to-left">
+						<img src="/arrow-l.svg" alt="">
+					</button>
+					<span>2 / 5</span>
+					<button class="btn-to-right">
+						<img src="/arrow-r.svg" alt="">
+					</button>
 				</div>
-
-				<div class="movies-grind container">
-					<div class="movie-card">
-						<div class="img_box">
-							<img src="/image-1.svg" alt="" />
-						</div>
-						<h3>Побег из Претории</h3>
-						<p>Триллер</p>
-						<span class="rating">6.70</span>
-						<div class="movie-overlay">Карточка фильма</div>
-					</div>
-					<div class="movie-card">
-						<div class="img_box">
-							<img src="/image-2.svg" alt="" />
-						</div>
-						<h3>Джокер</h3>
-						<p>Триллер, драма, криминал</p>
-						<span class="rating green">8.50</span>
-						<div class="movie-overlay">Карточка фильма</div>
-					</div>
-					<div class="movie-card">
-						<div class="img_box">
-							<img src="/image-3.svg" alt="" />
-						</div>
-						<h3>Звёздные войны: Скайуокер. Восход</h3>
-						<p>Фантастика, фэнтези, боевик, приключения</p>
-						<span class="rating">6.70</span>
-						<div class="movie-overlay">Карточка фильма</div>
-					</div>
-					<div class="movie-card">
-						<div class="img_box">
-							<img src="/image-4.svg" alt="" />
-						</div>
-						<h3>Джентльмены</h3>
-						<p>Боевик, комедия, криминал</p>
-						<span class="rating green">8.00</span>
-						<div class="movie-overlay">Карточка фильма</div>
-					</div>
-					<div class="movie-card">
-						<div class="img_box">
-							<img src="/image-5.svg" alt="" />
-						</div>
-						<h3>Ford против Ferrari</h3>
-						<p>Биография, спорт, драма, боевик</p>
-						<span class="rating green">8.10</span>
-						<div class="movie-overlay">Карточка фильма</div>
-					</div>
-					<div class="movie-card">
-						<div class="img_box">
-							<img src="/image-6.svg" alt="" />
-						</div>
-						<h3>3022</h3>
-						<p>Фантастика, триллер</p>
-						<span class="rating red">4.90</span>
-						<div class="movie-overlay">Карточка фильма</div>
-					</div>
-					<div class="movie-card">
-						<div class="img_box">
-							<img src="/image-7.svg" alt="" />
-						</div>
-						<h3>Хищные птицы: Потрясающая история Харли Квинн</h3>
-						<p>Боевик, криминал, комедия</p>
-						<span class="rating">6.20</span>
-						<div class="movie-overlay">Карточка фильма</div>
-					</div>
-					<div class="movie-card">
-						<div class="img_box">
-							<img src="/image-8.svg" alt="" />
-						</div>
-						<h3>Плохие парни навсегда</h3>
-						<p>Боевик, комедия, криминал</p>
-						<span class="rating">6.90</span>
-						<div class="movie-overlay">Карточка фильма</div>
-					</div>
-				</div>
-				<button class="view-all">Все новинки</button>
-			</section>
-
-			<section class="popular-persons container">
-				<h2>Популярные персоны</h2>
-				<div class="persons-wrapper">
-					<div class="person">
-						<span class="rank">1-е место</span>
-						<img
-							src="./src/img/Квентин Тарантино.jpg"
-							alt="Квентин Тарантино"
-						/>
-						<div class="person-info">
-							<p class="name">Квентин Тарантино</p>
-							<p class="original-name">Quentin Tarantino</p>
-							<p class="age">57 лет</p>
-						</div>
-					</div>
-					<div class="person">
-						<span class="rank">2-е место</span>
-						<img src="./src/img/stetham2.jpg" alt="Джейсон Стэйтем" />
-						<div class="person-info">
-							<p class="name">Джейсон Стэйтем</p>
-							<p class="original-name">Jason Statham</p>
-							<p class="age">54 года</p>
-						</div>
-					</div>
-					<div class="persons-list">
-						<ul>
-							<li>
-								<div class="list-info">
-									<p class="name">Тьерри Лермитт</p>
-									<p class="age">67 лет</p>
-								</div>
-								<span class="place">3-е место</span>
-							</li>
-							<li>
-								<div class="list-info">
-									<p class="name">Джеки Чан</p>
-									<p class="age">68 лет</p>
-								</div>
-								<span class="place">4-е место</span>
-							</li>
-							<li>
-								<div class="list-info">
-									<p class="name">Том Харди</p>
-									<p class="age">46 лет</p>
-								</div>
-								<span class="place">5-е место</span>
-							</li>
-							<li>
-								<div class="list-info">
-									<p class="name">Анна Кендрик</p>
-									<p class="age">38 лет</p>
-								</div>
-								<span class="place">6-е место</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-
-			<section class="expected-movies container">
-				<div class="header">
-					<h2>Ожидаемые новинки</h2>
-					<div class="arrows">
-						<span>←</span>
-						<span>2 / 5</span>
-						<span>→</span>
-					</div>
-				</div>
-				<div class="movies-grid">
-					<div class="movie">
-						<img
-							src="./src/img/Побег из Претории.jpeg"
-							alt="Побег из Претории"
-						/>
-						<p class="title">Побег из Претории</p>
-						<p class="date">7 мая 2023 в кино</p>
-					</div>
-					<div class="movie">
-						<img src="./src/img/Прощай.jpg" alt="Прощай" />
-						<p class="title">Прощай</p>
-						<p class="date">9 мая 2023 в кино</p>
-					</div>
-					<div class="movie">
-						<img
-							src="./src/img/Дружить по-русски.jpg"
-							alt="Дружить по-русски"
-						/>
-						<p class="title">Дружить по-русски</p>
-						<p class="date">12 мая 2023 в кино</p>
-					</div>
-					<div class="movie">
-						<img src="./src/img/Приди ко мне.jpg" alt="Приди ко мне" />
-						<p class="title">Приди ко мне</p>
-						<p class="date">20 мая 2023 в кино</p>
-					</div>
-				</div>
-			</section>
-		</main>
-
-		<footer class="footer">
-			<div class="social-icons">
-				<a href="https://vk.com/"><img src="./logo/vk.png" alt="VK" /></a>
-				<a href="https://www.instagram.com/"
-					><img src="./logo/instagram.png" alt="Instagram"
-				/></a>
-				<a href="https://www.facebook.com/"
-					><img src="./logo/facebook.png" alt="Facebook"
-				/></a>
-				<a href="#"><img src="./logo/твиттерх.png" alt="Twitter" /></a>
-				<a href="https://www.youtube.com/"
-					><img src="./logo/youtube.png" alt="YouTube"
-				/></a>
 			</div>
-			<nav class="footer-nav">
-				<a href="#">Афиша</a>
-				<a href="#">Новости</a>
-				<a href="#">Персоны</a>
-				<a href="#">Рейтинги</a>
-				<a href="#">Рецензии</a>
-				<a href="#">Каталог фильмов</a>
-			</nav>
-			<p class="copyright">2020 © Kinoarea. Все права защищены</p>
-			<a href="#" class="privacy-policy">Политика конфиденциальности</a>
-		</footer>
+			<div class="moviesGrid container"></div>
+		</section>
+	</main>
 
-		<script type="module" src="/src/main.js"></script>
-	</body>
+	<footer class="footer">
+		<div class="social-icons">
+			<a href=""><img src="/logo/vk.svg" alt="VK" /></a>
+			<a href=""><img src="/logo/instagram.svg" alt="Instagram" /></a>
+			<a href=""><img src="/logo/facebook.svg" alt="Facebook" /></a>
+			<a href=""><img src="/logo/twitter.svg" alt="Twitter" /></a>
+			<a href=""><img src="/logo/youtube.svg" alt="YouTube" /></a>
+		</div>
+		<nav class="footer-nav">
+			<a href="">Афиша</a>
+			<a href="">Новости</a>
+			<a href="">Персоны</a>
+			<a href="">Рейтинги</a>
+			<a href="">Рецензии</a>
+			<a href="">Каталог фильмов</a>
+		</nav>
+		<p class="copyright">2020 © Kinoarea. Все права защищены</p>
+		<a href="#" class="privacy-policy">Политика конфиденциальности</a>
+	</footer>
+
+	<script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
