@@ -43,8 +43,8 @@ function createPopularFilmsElement(topFilms) {
   gradeDiv.textContent = topFilms.vote_average;
 
   const img = document.createElement("img");
-  img.src = topFilms.poster_path;
-
+  img.src = 'https://image.tmdb.org/t/p' + topFilms.poster_path;
+  
   const p = document.createElement("p");
   p.textContent = topFilms.title;
 
