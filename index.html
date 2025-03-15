@@ -4,12 +4,11 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="/style.css" />
+	<link rel="stylesheet" href="./src/style.css" />
 	<title>Kinoarea</title>
 </head>
 
 <body>
-	<img class="main-img" src="/background-img.svg" alt="" />
 
 	<header class="container">
 		<div class="logo">
@@ -18,13 +17,13 @@
 		</div>
 
 		<nav>
-			<a href="">Афиша</a>
-			<a href="">Медиа</a>
-			<a href="">Фильмы</a>
-			<a href="">Актёры</a>
-			<a href="">Новости</a>
-			<a href="">Подборки</a>
-			<a href="">Категории</a>
+			<div class="genre">Афиша</div>
+			<div class="genre">Медиа</div>
+			<div class="genre">Фильмы</div>
+			<div class="genre">Актёры</div>
+			<div class="genre">Новости</div>
+			<div class="genre">Подборки</div>
+			<div class="genre">Категории</div>
 		</nav>
 
 		<div class="btns">
@@ -36,24 +35,174 @@
 	</header>
 
 	<main>
+		<div class="main-img">
+			<img src="/background-img.svg" alt="" />
+		</div>
 		<section class="now-in-cinema container">
 			<div class="movies-filter">
 				<h1>Сейчас в кино</h1>
 				<span class="line"></span>
 
-				<div class="categories">
-					<a href="">Все</a>
-					<a href="">Боевики</a>
-					<a href="">Приключения</a>
-					<a href="">Комедии</a>
-					<a href="">Фанастика</a>
-					<a href="">Триллеры</a>
-					<a href="">Драма</a>
-				</div>
+				<div class="categories"></div>
 			</div>
 
 			<div class="movies-grind container"> </div>
 			<button class="view-all">Все новинки</button>
+		</section>
+
+		<section class="new-trailers container">
+			<div class="trailers-link">
+				<h2>Новые трейлеры</h2>
+				<div class="all-trailers">
+					<span>Все трейлеры</span>
+					<img src="/vector.svg" alt="vector">
+				</div>
+			</div>
+			<div class="trailer-content">
+				<div class="trailer">
+					<iframe width="100%" height="100%"
+						src="https://www.youtube.com/embed/FUK2kdPsBws?si=Bvj3_ICsBx2Y3l9_" title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+				<div class="trailer-info">
+					<div class="main-trailer">
+						<h3>Форсаж 9</h3>
+						<div class="social-icons">
+							<img src="/logo/vk.svg" alt="vk">
+							<img src="/logo/instagram.svg" alt="instagram">
+							<img src="/logo/facebook.svg" alt="facebook">
+							<img src="/logo/twitter.svg" alt="twitter">
+							<img src="/setting.svg" alt="setting">
+						</div>
+					</div>
+					<div class="likes-dislikes">
+						<div class="likes-dislikes-btn">
+							<button>
+								<img src="/like.svg" alt="like">
+							</button>
+							<span>3 245</span>
+						</div>
+						<div class="likes-dislikes-btn">
+							<button>
+								<img src="/dislike.svg" alt="dislike">
+							</button>
+							<span>420</span>
+						</div>
+					</div>
+				</div>
+				<div class="scrollbar container">
+					<div class="scroll-container">
+						<div class="scroll-content"></div>
+					</div>
+					<div class="upcoming-grids">
+						<div class="grid-box">
+							<div class="img">
+								<img src="/mulan.svg" alt="mulan">
+							</div>
+							<span>Мулан</span>
+						</div>
+						<div class="grid-box">
+							<div class="img">
+								<img src="/forsage-img.svg" alt="forsage">
+							</div>
+							<span>Форсаж 9</span>
+						</div>
+						<div class="grid-box">
+							<div class="img">
+								<img src="/trailer.svg" alt="trailer">
+							</div>
+							<span>Чёрная Вдова</span>
+						</div>
+						<div class="grid-box">
+							<div class="img">
+								<img src="/trailer-img.svg" alt="trailer">
+							</div>
+							<span>Тихое место 2</span>
+						</div>
+
+						<div class="grid-box">
+							<div class="img">
+								<img src="/trailer-img.svg" alt="trailer">
+							</div>
+							<span>Тихое место 2</span>
+						</div>
+						<div class="grid-box">
+							<div class="img">
+								<img src="/trailer-img.svg" alt="trailer">
+							</div>
+							<span>Тихое место 2</span>
+						</div>
+						<div class="grid-box">
+							<div class="img">
+								<img src="/trailer-img.svg" alt="trailer">
+							</div>
+							<span>Тихое место 2</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="popular-films container">
+			<div class="movies-filter">
+				<h1>Популярные фильмы</h1>
+				<span class="line"></span>
+
+				<div class="years">
+					<span>Всё время</span>
+					<span>2020</span>
+					<span>2019</span>
+					<span>2018</span>
+					<span>2017</span>
+					<span>2016</span>
+					<span>2015</span>
+				</div>
+			</div>
+			<div class="popular-movies container">
+				<div class="film-card">
+					<div class="image_box">
+						<img src="/jocker.svg" alt="Название фильма">
+					</div>
+					<h3>Джокер</h3>
+					<p>Триллер, драма, криминал</p>
+					<span class="rating green">8.50</span>
+				</div>
+				<div class="film-card">
+					<div class="image_box">
+						<img src="/toy-story.svg" alt="Название фильма">
+					</div>
+					<h3>История игрушек 4</h3>
+					<p>Мультфильм, фэнтези, комедия, приключения ...</p>
+					<span class="rating green">7.80</span>
+				</div>
+				<div class="film-card">
+					<div class="image_box">
+						<img src="/inHollywood.svg" alt="Название фильма">
+					</div>
+					<h3>Однажды в… Голливуде</h3>
+					<p>Драма, комедия</p>
+					<span class="rating green">7.70</span>
+				</div>
+				<div class="film-card">
+					<div class="image_box">
+						<img src="/Solstice.svg" alt="Название фильма">
+					</div>
+					<h3>Солнцестояние</h3>
+					<p>Ужасы, триллер, драма</p>
+					<span class="rating green">7.10</span>
+				</div>
+			</div>
+			<div class="pages">
+				<button>
+					<img src="./public/arrow-l.svg" alt="">
+				</button>
+				<span>4/15</span>
+				<button>
+					<img src="./public/arrow-r.svg" alt="">
+				</button>
+			</div>
 		</section>
 
 		<section class="popular-persons container">

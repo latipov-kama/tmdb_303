@@ -1,6 +1,4 @@
 export function MovieCard(movie) {
-    const container = document.createElement("div");
-
     const card = document.createElement("div");
     card.classList.add("movie-card");
 
@@ -25,15 +23,12 @@ export function MovieCard(movie) {
     rating.textContent = movie.vote_average.toFixed(2);
 
     card.append(imgBox, title, genre, rating);
-    container.appendChild(card);
 
-    container.onmouseenter = () => {
-        card.style.transform = "scale(1.05)";
-    }
+    card.onmouseenter = () => {
+        let bg_img = document.querySelector(".main-img img");
 
-    container.onmouseleave = () => {
-        card.style.transform = "scale(1)";  
-    }
+        bg_img.src = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
+    };
 
-    return container;
+    return card;
 };
