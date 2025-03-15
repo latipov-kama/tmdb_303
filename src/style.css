@@ -670,6 +670,10 @@ header {
       border-radius: 10px;
       overflow: hidden;
     }
+	img:hover{
+		transform: scale(1.05);
+		transition: 0.5s;
+	}
   }
 }
 .popular-films {
@@ -735,6 +739,10 @@ header {
 	  height: 412px;
       overflow: hidden;
     }
+	img:hover{
+		transform: scale(1.05);
+		transition: 0.3s;
+	}
   }
 }
 
