@@ -9,7 +9,7 @@ export const api = axios.create({
 		Authorization: `Bearer ${access_token}`,
 	},
 	params: {
-		language: "ru-Ru",
+		language: "ru-RU",
 	}
 });
 

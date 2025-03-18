@@ -1,308 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Kinoarea</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./src/style.css" />
-	<title>Kinoarea</title>
-</head>
+  <body>
+    <header class="container">
+      <div class="logo">
+        <img src="/logo.svg" alt="" />
+        <img src="/social-links.svg" alt="" />
+      </div>
 
-<body>
+      <nav>
+        <a href="">Афиша</a>
+        <a href="">Медиа</a>
+        <a href="">Фильмы</a>
+        <a href="">Актёры</a>
+        <a href="">Новости</a>
+        <a href="">Подборки</a>
+        <a href="">Категории</a>
+      </nav>
 
-	<header class="container">
-		<div class="logo">
-			<img src="/logo.svg" alt="" />
-			<img src="/social-links.svg" alt="" />
+      <div class="btns">
+        <button class="search">
+          <img src="/search-vector.svg" alt="" />
+        </button>
+        <button class="sign-in">Войти</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-img">
+        <img src="/background-img.svg" alt="bg image" />
+      </div>
+      <section class="now-in-cinema container">
+        <div class="movies-filter">
+          <h1>Сейчас в кино</h1>
+          <span class="line"></span>
+
+          <div class="categories"></div>
+        </div>
+
+        <div class="movies-grind container"></div>
+        <button class="view-all">Все новинки</button>
+      </section>
+	  <section class="new-trailers container">
+		<div class="text">
+		  <h1>Новые трейлеры</h1>
+		  <div>
+			<p>Все трейлеры</p>
+			<img src="/Arrow 1.png" alt="" />
+		  </div>
 		</div>
-
-		<nav>
-			<div class="genre">Афиша</div>
-			<div class="genre">Медиа</div>
-			<div class="genre">Фильмы</div>
-			<div class="genre">Актёры</div>
-			<div class="genre">Новости</div>
-			<div class="genre">Подборки</div>
-			<div class="genre">Категории</div>
-		</nav>
-
-		<div class="btns">
-			<button class="search">
-				<img src="/search-vector.svg" alt="" />
-			</button>
-			<button class="sign-in">Войти</button>
+		<div class="trailer">
+		  <img src="/image 3.svg" alt="" />
+		  <div>
+			<div class="trailer-name">
+			  <h1>Форсаж 9</h1>
+			  <div class="message">
+				<img src="/image-Photoroom.png" alt="" />
+				<img src="/image-Photoroom (2).png" alt="" />
+				<img src="/image-Photoroom (3).png" alt="" />
+				<img src="/image-Photoroom (4).png" alt="" />
+				<img src="/image-Photoroom (5).png" alt="" />
+			  </div>
+			</div>
+			<div class="trailer-like">
+			  <div class="like">
+				<div><img src="/like 1.png" alt="" /></div>
+				<p>3 245</p>
+			  </div>
+			  <div class="deslike">
+				<div><img src="/like 1 (1).png" alt="" /></div>
+				<p>420</p>
+			  </div>
+			</div>
+		  </div>
+		  <div class="films"></div>
 		</div>
-	</header>
-
-	<main>
-		<div class="main-img">
-			<img src="/background-img.svg" alt="" />
+	  </section>
+	  <section class="popular-films container">
+		<div class="texts">
+		  <h1>Популярные фильмы</h1>
+		  <div class="tire"></div>
+		  <div class="time">
+			<p>Всё время</p>
+			<p>2020</p>
+			<p>2019</p>
+			<p>2018</p>
+			<p>2017</p>
+			<p>2016</p>
+			<p>2015</p>
+		  </div>
 		</div>
-		<section class="now-in-cinema container">
-			<div class="movies-filter">
-				<h1>Сейчас в кино</h1>
-				<span class="line"></span>
+		<div class="top-films"></div>
+	  </section>
+      <section class="popular-persons container">
+        <h2>Популярные персоны</h2>
+        <div class="persons-wrapper">
+          <div class="person">
+            <span class="rank">1-е место</span>
+            <img
+              src="./src/img/Квентин Тарантино.jpg"
+              alt="Квентин Тарантино"
+            />
+            <div class="person-info">
+              <p class="name">Квентин Тарантино</p>
+              <p class="original-name">Quentin Tarantino</p>
+              <p class="age">57 лет</p>
+            </div>
+          </div>
+          <div class="person">
+            <span class="rank">2-е место</span>
+            <img src="./src/img/stetham2.jpg" alt="Джейсон Стэйтем" />
+            <div class="person-info">
+              <p class="name">Джейсон Стэйтем</p>
+              <p class="original-name">Jason Statham</p>
+              <p class="age">54 года</p>
+            </div>
+          </div>
+          <div class="persons-list">
+            <ul>
+              <li>
+                <div class="list-info">
+                  <p class="others-name">Тьерри Лермитт</p>
+                  <p class="org-name">Tinto Brass</p>
+                  <p class="age">67 лет</p>
+                </div>
+                <span class="place">3-е место</span>
+              </li>
+              <li>
+                <div class="list-info">
+                  <p class="others-name">Джеки Чан</p>
+                  <p class="org-name">Jackie Chan</p>
+                  <p class="age">68 лет</p>
+                </div>
+                <span class="place">4-е место</span>
+              </li>
+              <li>
+                <div class="list-info">
+                  <p class="others-name">Том Харди</p>
+                  <p class="org-name">Tom Hardy</p>
+                  <p class="age">46 лет</p>
+                </div>
+                <span class="place">5-е место</span>
+              </li>
+              <li>
+                <div class="list-info">
+                  <p class="others-name">Анна Кендрик</p>
+                  <p class="org-name">Akshay Kumar</p>
+                  <p class="age">38 лет</p>
+                </div>
+                <span class="place">6-е место</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-				<div class="categories"></div>
-			</div>
+      <section class="expected-movies container">
+        <div class="header">
+          <h2>Ожидаемые новинки</h2>
+          <div class="arrows">
+            <button class="btn-to-left">
+              <img src="/arrow-l.svg" alt="" />
+            </button>
+            <span>2 / 5</span>
+            <button class="btn-to-right">
+              <img src="/arrow-r.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="moviesGrid container"></div>
+      </section>
+    </main>
 
-			<div class="movies-grind container"> </div>
-			<button class="view-all">Все новинки</button>
-		</section>
+    <footer class="footer">
+      <div class="social-icons">
+        <a href=""><img src="/logo/vk.svg" alt="VK" /></a>
+        <a href=""><img src="/logo/instagram.svg" alt="Instagram" /></a>
+        <a href=""><img src="/logo/facebook.svg" alt="Facebook" /></a>
+        <a href=""><img src="/logo/twitter.svg" alt="Twitter" /></a>
+        <a href=""><img src="/logo/youtube.svg" alt="YouTube" /></a>
+      </div>
+      <nav class="footer-nav">
+        <a href="">Афиша</a>
+        <a href="">Новости</a>
+        <a href="">Персоны</a>
+        <a href="">Рейтинги</a>
+        <a href="">Рецензии</a>
+        <a href="">Каталог фильмов</a>
+      </nav>
+      <p class="copyright">2020 © Kinoarea. Все права защищены</p>
+      <a href="#" class="privacy-policy">Политика конфиденциальности</a>
+    </footer>
 
-		<section class="new-trailers container">
-			<div class="trailers-link">
-				<h2>Новые трейлеры</h2>
-				<div class="all-trailers">
-					<span>Все трейлеры</span>
-					<img src="/vector.svg" alt="vector">
-				</div>
-			</div>
-			<div class="trailer-content">
-				<div class="trailer">
-					<iframe width="100%" height="100%"
-						src="https://www.youtube.com/embed/FUK2kdPsBws?si=Bvj3_ICsBx2Y3l9_" title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-				<div class="trailer-info">
-					<div class="main-trailer">
-						<h3>Форсаж 9</h3>
-						<div class="social-icons">
-							<img src="/logo/vk.svg" alt="vk">
-							<img src="/logo/instagram.svg" alt="instagram">
-							<img src="/logo/facebook.svg" alt="facebook">
-							<img src="/logo/twitter.svg" alt="twitter">
-							<img src="/setting.svg" alt="setting">
-						</div>
-					</div>
-					<div class="likes-dislikes">
-						<div class="likes-dislikes-btn">
-							<button>
-								<img src="/like.svg" alt="like">
-							</button>
-							<span>3 245</span>
-						</div>
-						<div class="likes-dislikes-btn">
-							<button>
-								<img src="/dislike.svg" alt="dislike">
-							</button>
-							<span>420</span>
-						</div>
-					</div>
-				</div>
-				<div class="scrollbar container">
-					<div class="scroll-container">
-						<div class="scroll-content"></div>
-					</div>
-					<div class="upcoming-grids">
-						<div class="grid-box">
-							<div class="img">
-								<img src="/mulan.svg" alt="mulan">
-							</div>
-							<span>Мулан</span>
-						</div>
-						<div class="grid-box">
-							<div class="img">
-								<img src="/forsage-img.svg" alt="forsage">
-							</div>
-							<span>Форсаж 9</span>
-						</div>
-						<div class="grid-box">
-							<div class="img">
-								<img src="/trailer.svg" alt="trailer">
-							</div>
-							<span>Чёрная Вдова</span>
-						</div>
-						<div class="grid-box">
-							<div class="img">
-								<img src="/trailer-img.svg" alt="trailer">
-							</div>
-							<span>Тихое место 2</span>
-						</div>
-
-						<div class="grid-box">
-							<div class="img">
-								<img src="/trailer-img.svg" alt="trailer">
-							</div>
-							<span>Тихое место 2</span>
-						</div>
-						<div class="grid-box">
-							<div class="img">
-								<img src="/trailer-img.svg" alt="trailer">
-							</div>
-							<span>Тихое место 2</span>
-						</div>
-						<div class="grid-box">
-							<div class="img">
-								<img src="/trailer-img.svg" alt="trailer">
-							</div>
-							<span>Тихое место 2</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="popular-films container">
-			<div class="movies-filter">
-				<h1>Популярные фильмы</h1>
-				<span class="line"></span>
-
-				<div class="years">
-					<span>Всё время</span>
-					<span>2020</span>
-					<span>2019</span>
-					<span>2018</span>
-					<span>2017</span>
-					<span>2016</span>
-					<span>2015</span>
-				</div>
-			</div>
-			<div class="popular-movies container">
-				<div class="film-card">
-					<div class="image_box">
-						<img src="/jocker.svg" alt="Название фильма">
-					</div>
-					<h3>Джокер</h3>
-					<p>Триллер, драма, криминал</p>
-					<span class="rating green">8.50</span>
-				</div>
-				<div class="film-card">
-					<div class="image_box">
-						<img src="/toy-story.svg" alt="Название фильма">
-					</div>
-					<h3>История игрушек 4</h3>
-					<p>Мультфильм, фэнтези, комедия, приключения ...</p>
-					<span class="rating green">7.80</span>
-				</div>
-				<div class="film-card">
-					<div class="image_box">
-						<img src="/inHollywood.svg" alt="Название фильма">
-					</div>
-					<h3>Однажды в… Голливуде</h3>
-					<p>Драма, комедия</p>
-					<span class="rating green">7.70</span>
-				</div>
-				<div class="film-card">
-					<div class="image_box">
-						<img src="/Solstice.svg" alt="Название фильма">
-					</div>
-					<h3>Солнцестояние</h3>
-					<p>Ужасы, триллер, драма</p>
-					<span class="rating green">7.10</span>
-				</div>
-			</div>
-			<div class="pages">
-				<button>
-					<img src="./public/arrow-l.svg" alt="">
-				</button>
-				<span>4/15</span>
-				<button>
-					<img src="./public/arrow-r.svg" alt="">
-				</button>
-			</div>
-		</section>
-
-		<section class="popular-persons container">
-			<h2>Популярные персоны</h2>
-			<div class="persons-wrapper">
-				<div class="person">
-					<span class="rank">1-е место</span>
-					<img src="./src/img/Квентин Тарантино.jpg" alt="Квентин Тарантино" />
-					<div class="person-info">
-						<p class="name">Квентин Тарантино</p>
-						<p class="original-name">Quentin Tarantino</p>
-						<p class="age">57 лет</p>
-					</div>
-				</div>
-				<div class="person">
-					<span class="rank">2-е место</span>
-					<img src="./src/img/stetham2.jpg" alt="Джейсон Стэйтем" />
-					<div class="person-info">
-						<p class="name">Джейсон Стэйтем</p>
-						<p class="original-name">Jason Statham</p>
-						<p class="age">54 года</p>
-					</div>
-				</div>
-				<div class="persons-list">
-					<ul>
-						<li>
-							<div class="list-info">
-								<p class="others-name">Тьерри Лермитт</p>
-								<p class="org-name">Tinto Brass</p>
-								<p class="age">67 лет</p>
-							</div>
-							<span class="place">3-е место</span>
-						</li>
-						<li>
-							<div class="list-info">
-								<p class="others-name">Джеки Чан</p>
-								<p class="org-name">Jackie Chan</p>
-								<p class="age">68 лет</p>
-							</div>
-							<span class="place">4-е место</span>
-						</li>
-						<li>
-							<div class="list-info">
-								<p class="others-name">Том Харди</p>
-								<p class="org-name">Tom Hardy</p>
-								<p class="age">46 лет</p>
-							</div>
-							<span class="place">5-е место</span>
-						</li>
-						<li>
-							<div class="list-info">
-								<p class="others-name">Анна Кендрик</p>
-								<p class="org-name">Akshay Kumar</p>
-								<p class="age">38 лет</p>
-							</div>
-							<span class="place">6-е место</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="expected-movies container">
-			<div class="header">
-				<h2>Ожидаемые новинки</h2>
-				<div class="arrows">
-					<button class="btn-to-left">
-						<img src="/arrow-l.svg" alt="">
-					</button>
-					<span>2 / 5</span>
-					<button class="btn-to-right">
-						<img src="/arrow-r.svg" alt="">
-					</button>
-				</div>
-			</div>
-			<div class="moviesGrid container"></div>
-		</section>
-	</main>
-
-	<footer class="footer">
-		<div class="social-icons">
-			<a href=""><img src="/logo/vk.svg" alt="VK" /></a>
-			<a href=""><img src="/logo/instagram.svg" alt="Instagram" /></a>
-			<a href=""><img src="/logo/facebook.svg" alt="Facebook" /></a>
-			<a href=""><img src="/logo/twitter.svg" alt="Twitter" /></a>
-			<a href=""><img src="/logo/youtube.svg" alt="YouTube" /></a>
-		</div>
-		<nav class="footer-nav">
-			<a href="">Афиша</a>
-			<a href="">Новости</a>
-			<a href="">Персоны</a>
-			<a href="">Рейтинги</a>
-			<a href="">Рецензии</a>
-			<a href="">Каталог фильмов</a>
-		</nav>
-		<p class="copyright">2020 © Kinoarea. Все права защищены</p>
-		<a href="#" class="privacy-policy">Политика конфиденциальности</a>
-	</footer>
-
-	<script type="module" src="/src/main.js"></script>
-</body>
-
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
