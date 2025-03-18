@@ -1,3 +1,7 @@
+import { header } from "./header";
+
+header();
+
 export function MovieCard(movie) {
 	const card = document.createElement("div");
 	card.classList.add("movie-card");
