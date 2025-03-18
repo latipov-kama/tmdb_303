@@ -12,4 +12,3 @@ export const api = axios.create({
 		language: "ru-RU",
 	}
 });
-

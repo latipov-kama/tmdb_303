@@ -3,6 +3,7 @@ import { render } from "./libs/utils";
 import { MovieCard } from "./components/MovieCard";
 import { Genre } from "./components/Genre";
 import { createFilmsElement } from "./components/films";
+import { createPopularPersonElement } from "./components/popularPersons";
 
 const moviesGrind = document.querySelector(".movies-grind");
 const upcomingGrind = document.querySelector(".moviesGrid");
@@ -14,11 +15,13 @@ const getNowPlaying = api.get("movie/now_playing");
 const getPopular = api.get("movie/popular");
 const getUpcoming = api.get("movie/upcoming");
 const getGenres = api.get("/genre/movie/list");
+const popularPerson = api.get("/person/popular");
 
 let films = document.querySelector(".films");
 let topFilms = document.querySelector(".top-films");
-Promise.all([getNowPlaying, getPopular, getUpcoming, getGenres])
-	.then(([nowPlaying, popular, upcoming, genres]) => {
+let personsWrapper = document.querySelector(".persons-wrapper");
+Promise.all([getNowPlaying, getPopular, getUpcoming, getGenres, popularPerson])
+	.then(([nowPlaying, popular, upcoming, genres, person]) => {
 		// movies
 		render(nowPlaying.data.results.slice(0, 8), moviesGrind, MovieCard);
 		render(upcoming.data.results.slice(0, 4), upcomingGrind, MovieCard);
@@ -28,5 +31,7 @@ Promise.all([getNowPlaying, getPopular, getUpcoming, getGenres])
 
 		// fro trailers
 		render(upcoming.data.results, films, createFilmsElement);
+		render(person.data.results.slice(0, 2), personsWrapper, createPopularPersonElement)
+		
 	})
 	.catch((error) => console.error(error));
