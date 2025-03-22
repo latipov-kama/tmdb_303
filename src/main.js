@@ -15,7 +15,7 @@ const getNowPlaying = api.get("movie/now_playing");
 const getPopular = api.get("movie/popular");
 const getUpcoming = api.get("movie/upcoming");
 const getGenres = api.get("/genre/movie/list");
-const popularPerson = api.get("/person/popular");
+const popularPerson = api.get("person/popular");
 
 let films = document.querySelector(".films");
 let topFilms = document.querySelector(".top-films");

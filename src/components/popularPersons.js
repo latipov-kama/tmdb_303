@@ -1,10 +1,9 @@
 export function createPopularPersonElement(persons) {
   const personDiv = document.createElement("div");
   personDiv.classList.add("person");
-
+  
   const rankSpan = document.createElement("span");
   rankSpan.classList.add("rank");
-  rankSpan.textContent = persons.gender + '-' + 'место';
 
   const img = document.createElement("img");
   img.src = `https://image.tmdb.org/t/p/original${persons.profile_path}`;

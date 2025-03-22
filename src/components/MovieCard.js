@@ -29,6 +29,9 @@ export function MovieCard(movie) {
 
 		bg_img.src = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
 	};
-
+    card.onclick = () => {
+		localStorage.setItem('movieId', movie.id)
+		window.location.href = '/src/pages/cardsFilm/'
+	}
 	return card;
 }
