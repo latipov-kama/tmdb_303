@@ -22,9 +22,7 @@ export function MovieCard(movie) {
 
 	const rating = document.createElement("span");
 	rating.classList.add("rating");
-	if (movie.ratingClass >= 7) rating.classList.add("green");
-	else if (movie.vote_average < 5) rating.classList.add("red");
-	rating.textContent = movie.vote_average.toFixed(2);
+	rating.textContent = movie.vote_average;
 
 	card.append(imgBox, title, genre, rating);
 
@@ -32,6 +30,11 @@ export function MovieCard(movie) {
 		let bg_img = document.querySelector(".main-img img");
 
 		bg_img.src = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
+	};
+
+	card.onclick = () => {
+		localStorage.setItem("selectedMovieId", movie.id);
+		window.location.href = "./filmPage.html";
 	};
 
 	return card;

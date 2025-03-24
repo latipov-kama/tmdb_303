@@ -1,4 +1,4 @@
-// import { api } from "./services/api";
+import { api } from "../services/api";
 
 export function createFilmsElement(films) {
 	const div = document.createElement("div");

@@ -171,14 +171,6 @@ header {
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 22px;
 	max-width: 100%;
-
-	.green {
-		background: rgba(75, 203, 54, 1);
-	}
-
-	.red {
-		background: rgba(203, 63, 54, 1);
-	}
 }
 
 .movie-card {
@@ -300,7 +292,7 @@ header {
 
 .persons-wrapper {
 	display: grid;
-	grid-auto-rows: 420px;
+	/* grid-auto-rows: 420px; */
 	grid-template-columns: repeat(3, 1fr);
 	gap: 23px;
 }
@@ -817,7 +809,7 @@ header {
 				align-items: center;
 				gap: 5px;
 
-				div {
+				raitings {
 					width: 52px;
 					height: 52px;
 					background-color: rgba(137, 203, 54, 0.3);
@@ -833,11 +825,11 @@ header {
 		}
 
 		.film-description {
-			margin-top: 10px;
+			margin-top: 30px;
 			width: 627px;
-			
+
 			p {
-				
+
 				font-size: 20px;
 				line-height: 167%;
 				font-weight: 500;
@@ -898,7 +890,6 @@ header {
 .info-table {
 	display: flex;
 	justify-content: space-between;
-	/* width: 627px; */
 	margin-top: 45px;
 	padding: 45px 100px;
 
@@ -967,13 +958,14 @@ a:hover {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	column-gap: 37px;
-	row-gap: 25px;
+	row-gap: 55px;
+	margin-bottom: 100px;
 
 	.actor {
-		height: 328px;
-		
+
 		img {
 			width: 208px;
+			height: 300px;
 		}
 	}
 
@@ -1005,7 +997,7 @@ a:hover {
 }
 
 .trailer-box {
-	margin-bottom: 100px;
+	margin-bottom: 200px;
 
 	.trailer-main {
 		display: flex;
@@ -1023,7 +1015,7 @@ a:hover {
 			display: flex;
 			align-items: center;
 			gap: 20px;
-
+			
 			span {
 				font-size: 20px;
 				font-weight: 700;
@@ -1034,7 +1026,7 @@ a:hover {
 
 	.trailer-content {
 		margin-bottom: 26px;
-		
+
 		iframe {
 			border-radius: 10px;
 			width: 100%;
@@ -1042,11 +1034,132 @@ a:hover {
 		}
 	}
 
-	.trailer-name {
+	.trailer-title {
+		display: flex;
+		gap: 33px;
+
 		h3 {
 			font-size: 40px;
 			line-height: 100%;
 			font-weight: 900;
 		}
+
+		.social-links-box {
+			display: flex;
+			align-items: center;
+			margin-top: 13px;
+			gap: 20px;
+			width: 179px;
+
+			a {
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			img {
+				width: 15px;
+				height: 15px;
+			}
+
+			.menu {
+				position: absolute;
+				top: 8px;
+				left: 77%;
+				font-size: 25px;
+				color: rgba(79, 91, 124, 1);
+			}
+		}
+	}
+}
+
+.posters-section {
+	display: flex;
+	flex-direction: column;
+	gap: 53px;
+
+	.posters-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		h2 {
+			font-size: 48px;
+			font-weight: 900;
+			line-height: 100%;
+		}
+
+		.all-actors-link {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			cursor: pointer;
+
+			span {
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 100%;
+			}
+		}
+	}
+
+	.posters-box {
+		display: flex;
+		flex-direction: column;
+		gap: 34px;
+
+		.movie-title {
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 100%;
+		}
+
+		.poster-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			column-gap: 22px;
+
+			/* .poster {
+				max-width: 287px;
+				width: 100%;
+				height: 462px;
+				overflow: hidden;
+				transition: transform 0.3s ease-in-out;
+				border-radius: 10px;
+				cursor: pointer;
+
+				img {
+					object-fit: cover;
+					transition: 0.3s ease;
+					width: 287px;
+					height: 412px;
+				}
+			} */
+		}
+	}
+}
+
+.poster:hover img {
+	transform: scale(1.05);
+}
+
+.similar-movies-section {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 63px;
+
+	h2 {
+		font-size: 48px;
+		font-weight: 900;
+		line-height: 100%;
+	}
+
+	.similar-movies-box {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 22px;
+
 	}
 }
