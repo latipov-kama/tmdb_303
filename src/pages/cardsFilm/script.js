@@ -1,14 +1,24 @@
+import { Chart } from "Chart.js/auto";
+import { ActorCard } from "../../components/cardActor";
+import { render } from "../../libs/utils";
 import { api } from "/src/services/api.js";
 
 const id = localStorage.getItem("movieId");
+const filmClik = api.get(`movie/${id}`);
+const staff = api.get(`movie/${id}/credits`);
+const cadr = api.get(`movie/${id}/images`, { params: { language: null } });
 
-api
-  .get(`movie/${id}`)
-  .then((res) => clickFilm(res.data))
+let actors = document.querySelector(".actors");
+
+Promise.all([filmClik, staff, cadr])
+  .then(([filmClik, staff, cadr]) => {
+    clickFilm(filmClik.data);
+    CadrImg(cadr.data.backdrops.slice(0, 6));
+    render(staff.data.cast.slice(0, 10), actors, ActorCard);
+  })
   .catch((error) => console.error(error));
 
 function clickFilm(film) {
-  console.log(film);
   let pathImg = document.querySelector(".path");
   pathImg.src = `https://image.tmdb.org/t/p/original${film.backdrop_path}`;
 
@@ -16,7 +26,11 @@ function clickFilm(film) {
   posterImg.src = `https://image.tmdb.org/t/p/original${film.poster_path}`;
 
   let current = document.querySelector(".current");
+  let currentFilm = document.querySelector(".current-film");
+  let nameFilm = document.querySelector(".name-film");
   current.textContent = film.title;
+  currentFilm.textContent = film.title;
+  nameFilm.textContent = film.title;
 
   let filmName = document.querySelector(".name");
   filmName.textContent = film.title;
@@ -38,7 +52,8 @@ function clickFilm(film) {
 
   let genresP = document.querySelector(".genres");
   genresP.textContent = film.genres[0].name + "," + " " + "...";
-  let iframe = document.querySelector('iframe')
+
+  let iframe = document.querySelector("iframe");
   api.get(`/movie/${film.id}/videos`).then((res) => {
     let trailer = res.data.results.find((item) => item.type == "Trailer");
     if (trailer) {
@@ -47,4 +62,26 @@ function clickFilm(film) {
       alert("у этого фильма нет трейлера");
     }
   });
+  let ctx = document.querySelector("#myChart");
+
+  new Chart(ctx, {
+    type: "doughnut",
+    data: [10, film.vote_average],
+  });
+}
+
+function CadrImg(images) {
+  let img1 = document.querySelector("#img1");
+  let img2 = document.querySelector("#img2");
+  let img3 = document.querySelector("#img3");
+  let img4 = document.querySelector("#img4");
+  let img5 = document.querySelector("#img5");
+  let img6 = document.querySelector("#img6");
+
+  img1.src = `https://image.tmdb.org/t/p/original${images[0].file_path}`;
+  img2.src = `https://image.tmdb.org/t/p/original${images[1].file_path}`;
+  img3.src = `https://image.tmdb.org/t/p/original${images[2].file_path}`;
+  img4.src = `https://image.tmdb.org/t/p/original${images[3].file_path}`;
+  img5.src = `https://image.tmdb.org/t/p/original${images[4].file_path}`;
+  img6.src = `https://image.tmdb.org/t/p/original${images[5].file_path}`;
 }

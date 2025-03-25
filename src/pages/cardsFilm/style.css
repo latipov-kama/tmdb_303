@@ -24,6 +24,7 @@ body {
   height: 100vh;
   transition: 0.3 ease;
   background-color: #1e2538;
+  opacity: 80%;
 }
 
 .main-img::before {
@@ -265,6 +266,7 @@ header {
   img {
     width: 208px;
     height: 210px;
+    object-fit: cover;
   }
   .actor-name {
     font-weight: 700;
@@ -283,10 +285,10 @@ header {
   }
 }
 .new-trailers {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 79px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 79px;
   padding-top: 51px;
 }
 .text {
@@ -361,5 +363,68 @@ header {
         }
       }
     }
+  }
+}
+.film-stills {
+  padding-top: 97px;
+  .heder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 50px;
+      font-weight: 900;
+      line-height: 100%;
+    }
+    span {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 100%;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .transition {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .grid-card {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 363px);
+    grid-column-gap: 22px;
+    grid-row-gap: 22px;
+    div {
+      overflow: hidden;
+      border-radius: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .div1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .div2 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .div3 {
+    grid-area: 1 / 4 / 2 / 5;
+  }
+  .div4 {
+    grid-area: 2 / 3 / 3 / 5;
+  }
+  .div5 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div6 {
+    grid-area: 2 / 2 / 3 / 3;
   }
 }
