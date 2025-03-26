@@ -1,0 +1,26 @@
+import { api } from "../services/api";
+export function createFilmsElement(films) {
+  const div = document.createElement("div");
+  div.classList.add("film");
+
+  const img = document.createElement("img");
+  img.src = `https://image.tmdb.org/t/p/original${films.backdrop_path}`;
+
+  const p = document.createElement("p");
+  p.textContent = films.title;
+
+  let iframe = document.querySelector("iframe");
+  div.onclick = () => {
+    api.get(`/movie/${films.id}/videos`).then((res) => {
+      let trailer = res.data.results.find((item) => item.type == "Trailer");
+      if (trailer) {
+        iframe.src = `https://www.youtube.com/embed/${trailer.key}`;
+      } else {
+        alert("у этого фильма нет трейлера");
+      }
+    });
+  };
+  div.appendChild(img);
+  div.appendChild(p);
+  return div;
+}

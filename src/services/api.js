@@ -8,5 +8,7 @@ export const api = axios.create({
 	headers: {
 		Authorization: `Bearer ${access_token}`,
 	},
+	params: {
+		language: "ru-RU",
+	}
 });
-

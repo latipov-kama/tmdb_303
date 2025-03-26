@@ -1,21 +1,37 @@
-import { Movie, Movies } from "./componets/Movie.js";
-import { render } from "./libs/utils.js";
-import { api } from "./services/api.js";
+import { api } from "./services/api";
+import { render } from "./libs/utils";
+import { MovieCard } from "./components/MovieCard";
+import { Genre } from "./components/Genre";
+import { createFilmsElement } from "./components/films";
+import { createPopularPersonElement } from "./components/popularPersons";
+
+const moviesGrind = document.querySelector(".movies-grind");
+const upcomingGrind = document.querySelector(".moviesGrid");
+const genresBox = document.querySelector(".categories");
+
+// const showMoreBtn = document.querySelector(".view-all");
 
 const getNowPlaying = api.get("movie/now_playing");
 const getPopular = api.get("movie/popular");
+const getUpcoming = api.get("movie/upcoming");
+const getGenres = api.get("/genre/movie/list");
+const popularPerson = api.get("person/popular");
 
+let films = document.querySelector(".films");
+let topFilms = document.querySelector(".top-films");
+let personsWrapper = document.querySelector(".persons-wrapper");
+Promise.all([getNowPlaying, getPopular, getUpcoming, getGenres, popularPerson])
+	.then(([nowPlaying, popular, upcoming, genres, person]) => {
+		// movies
+		render(nowPlaying.data.results.slice(0, 8), moviesGrind, MovieCard);
+		render(upcoming.data.results.slice(0, 4), upcomingGrind, MovieCard);
+		render(popular.data.results.slice(0, 4), topFilms, MovieCard);
 
+		render(genres.data.genres.slice(0, 6), genresBox, Genre);
 
-document.addEventListener("DOMContentLoaded", () => {
-const moviesContainer = document.querySelector('.movies-grind');
-const container = document.querySelector(".movies-grid");
-
-    Promise.all([getNowPlaying, getPopular])
-    .then(([nowPlaying, popular]) => {
-        console.log(nowPlaying);
-        render(nowPlaying.data.results, moviesContainer, Movies);
-        render(popular.data.results, container, Movies);
-    })
-    .catch(err => console.error(err));
-})
+		// fro trailers
+		render(upcoming.data.results, films, createFilmsElement);
+		render(person.data.results.slice(0, 2), personsWrapper, createPopularPersonElement)
+		
+	})
+	.catch((error) => console.error(error));
