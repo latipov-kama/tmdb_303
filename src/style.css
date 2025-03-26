@@ -752,8 +752,6 @@ header {
 	height: 700px;
 }
 
-
-
 .film-infoBox {
 	display: flex;
 	align-items: center;
@@ -811,28 +809,7 @@ header {
 			gap: 5px;
 			margin-top: 14px;
 
-			.film-raiting {
-				width: 52px;
-				height: 52px;
-				position: relative;
-				background-color: rgba(75, 203, 54, 0.3);
-				border-radius: 50%;
-
-				canvas {
-					width: 100%;
-					height: 100%;
-				}
-
-				span {
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					color: white;
-					transform: translate(-50%, -50%);
-					font-size: 18px;
-					font-weight: bold;
-				}
-			}
+			
 		}
 
 		.film-raiting {
@@ -845,7 +822,6 @@ header {
 			width: 627px;
 
 			p {
-
 				font-size: 20px;
 				line-height: 167%;
 				font-weight: 500;
@@ -900,6 +876,30 @@ header {
 				}
 			}
 		}
+	}
+}
+
+.film-rating {
+	margin-top: 20px;
+	width: 52px;
+	height: 52px;
+	position: relative;
+	background-color: rgba(75, 203, 54, 0.3);
+	border-radius: 50%;
+
+	canvas {
+		width: 100%;
+		height: 100%;
+	}
+
+	span {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		color: white;
+		transform: translate(-50%, -50%);
+		font-size: 18px;
+		font-weight: bold;
 	}
 }
 
@@ -978,7 +978,6 @@ a:hover {
 	margin-bottom: 100px;
 
 	.actor {
-
 		div {
 			overflow: hidden;
 
@@ -989,7 +988,6 @@ a:hover {
 				object-fit: cover;
 			}
 		}
-
 	}
 
 	.actor-info {
@@ -1173,7 +1171,6 @@ a:hover {
 				}
 			}
 		}
-
 	}
 }
 
@@ -1207,7 +1204,6 @@ a:hover {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		column-gap: 22px;
-
 	}
 }
 

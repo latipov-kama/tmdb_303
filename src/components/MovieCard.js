@@ -34,7 +34,7 @@ export function MovieCard(movie) {
 
 	card.onclick = () => {
 		localStorage.setItem("selectedMovieId", movie.id);
-		window.location.href = "./src/filmPage/index.html";
+		window.location.href = "./src/pages/filmPage/";
 	};
 
 	return card;

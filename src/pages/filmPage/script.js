@@ -1,10 +1,10 @@
 import { Chart } from "chart.js/auto";
-import { header } from "../components/header";
-import { api } from "../services/api";
-import { render } from "../libs/utils";
-import { Starring } from "../components/starring";
-import { SimilarMovies } from "../components/SimilarMovies";
-import { createGallery } from "../components/gallery";
+import { header } from "../../components/header";
+import { api } from "../../services/api";
+import { render } from "../../libs/utils";
+import { Starring } from "../../components/starring";
+import { SimilarMovies } from "../../components/SimilarMovies";
+import { createGallery } from "../../components/gallery";
 
 header();
 
