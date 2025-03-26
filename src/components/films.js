@@ -9,18 +9,21 @@ export function createFilmsElement(films) {
   const p = document.createElement("p");
   p.textContent = films.title;
 
-  let iframe = document.querySelector("iframe");
-  div.onclick = () => {
-    api.get(`/movie/${films.id}/videos`).then((res) => {
-      let trailer = res.data.results.find((item) => item.type == "Trailer");
-      if (trailer) {
-        iframe.src = `https://www.youtube.com/embed/${trailer.key}`;
-      } else {
-        alert("у этого фильма нет трейлера");
-      }
-    });
-  };
-  div.appendChild(img);
-  div.appendChild(p);
-  return div;
+	div.appendChild(img);
+	div.appendChild(p);
+
+	let iframe = document.querySelector("iframe");
+
+	div.onclick = () => {
+		api.get(`/movie/${films.id}/videos`).then((res) => {
+			let trailer = res.data.results.find((item) => item.type == "Trailer");
+			if (trailer) {
+				iframe.src = `https://www.youtube.com/embed/${trailer.key}`;
+			} else {
+				alert("У этого фильма нет трейлера");
+			}
+		});
+	};
+	
+	return div;
 }

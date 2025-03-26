@@ -1,3 +1,7 @@
+import { header } from "./header";
+
+header();
+
 export function MovieCard(movie) {
 	const card = document.createElement("div");
 	card.classList.add("movie-card");
@@ -18,9 +22,7 @@ export function MovieCard(movie) {
 
 	const rating = document.createElement("span");
 	rating.classList.add("rating");
-	if (movie.ratingClass >= 7) rating.classList.add("green");
-	else if (movie.vote_average < 5) rating.classList.add("red");
-	rating.textContent = movie.vote_average.toFixed(2);
+	rating.textContent = movie.vote_average.toFixed(1);
 
 	card.append(imgBox, title, genre, rating);
 
@@ -29,9 +31,11 @@ export function MovieCard(movie) {
 
 		bg_img.src = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
 	};
-    card.onclick = () => {
-		localStorage.setItem('movieId', movie.id)
-		window.location.href = '/src/pages/cardsFilm/'
-	}
+
+	card.onclick = () => {
+		localStorage.setItem("selectedMovieId", movie.id);
+		window.location.href = "./src/pages/filmPage/";
+	};
+
 	return card;
 }
