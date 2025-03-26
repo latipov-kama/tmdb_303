@@ -1,6 +1,6 @@
 export function createPersonsList(persons) {
     const container = document.createElement("div");
-    container.classList.add("persons-container");
+    container.classList.add("persons-wrapper");
 
     persons.slice(0, 2).forEach((person, index) => {
         const personDiv = document.createElement("div");
@@ -43,6 +43,7 @@ export function createPersonsList(persons) {
     const listDiv = document.createElement("div");
     listDiv.classList.add("persons-list");
     const ul = document.createElement("ul");
+    ul.classList.add("ul");
 
     persons.slice(2).forEach((person, index) => {
         const li = document.createElement("li");

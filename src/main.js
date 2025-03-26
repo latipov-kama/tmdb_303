@@ -8,7 +8,7 @@ import { createPersonsList } from "./components/celebrities";
 const moviesGrind = document.querySelector(".movies-grind");
 const upcomingGrind = document.querySelector(".moviesGrid");
 const genresBox = document.querySelector(".categories");
-const celebritiesBox = document.querySelector(".persons-wrapper");
+const celebritiesBox = document.querySelector(".celebrities");
 
 const getNowPlaying = api.get("movie/now_playing");
 const getPopular = api.get("movie/popular");
@@ -35,4 +35,3 @@ Promise.all([getNowPlaying, getPopular, getUpcoming, getGenres, getCelebrities])
 		celebritiesBox.appendChild(createPersonsList(celebrities.data.results.slice(0, 6)));
 	})
 	.catch((error) => console.error(error));
-

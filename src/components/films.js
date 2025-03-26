@@ -16,7 +16,7 @@ export function createFilmsElement(films) {
 	let iframe = document.querySelector("iframe");
 
 	div.onclick = () => {
-		api.get(`/movies/${films.id}/videos`).then((res) => {
+		api.get(`/movie/${films.id}/videos`).then((res) => {
 			let trailer = res.data.results.find((item) => item.type == "Trailer");
 			if (trailer) {
 				iframe.src = `https://www.youtube.com/embed/${trailer.key}`;

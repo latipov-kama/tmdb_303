@@ -22,7 +22,7 @@ export function MovieCard(movie) {
 
 	const rating = document.createElement("span");
 	rating.classList.add("rating");
-	rating.textContent = movie.vote_average;
+	rating.textContent = movie.vote_average.toFixed(1);
 
 	card.append(imgBox, title, genre, rating);
 
@@ -34,7 +34,7 @@ export function MovieCard(movie) {
 
 	card.onclick = () => {
 		localStorage.setItem("selectedMovieId", movie.id);
-		window.location.href = "./filmPage.html";
+		window.location.href = "./src/filmPage/index.html";
 	};
 
 	return card;

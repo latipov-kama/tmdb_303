@@ -191,6 +191,8 @@ header {
 	}
 
 	img {
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
 		transition: 0.3s ease;
 	}
@@ -292,7 +294,6 @@ header {
 
 .persons-wrapper {
 	display: grid;
-	/* grid-auto-rows: 420px; */
 	grid-template-columns: repeat(3, 1fr);
 	gap: 23px;
 }
@@ -304,10 +305,12 @@ header {
 
 	text-align: center;
 	overflow: hidden;
+	height: 444px;
 }
 
 .person img {
 	width: 100%;
+	height: 100%;
 	border-radius: 8px;
 	display: block;
 }
@@ -371,6 +374,9 @@ header {
 	border-radius: 8px;
 	font-size: 14px;
 	overflow-y: auto;
+
+	height: 444px;
+	width: 466px;
 }
 
 .persons-list ul {
@@ -383,7 +389,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 16px 10px;
+	padding: 30px 10px;
 	font-size: 14px;
 	border-bottom: 1px solid #333;
 	white-space: nowrap;
@@ -651,16 +657,9 @@ header {
 			cursor: pointer;
 			width: 300px;
 			height: 252px;
-			/* width: 100%;
-			height: 100%; */
 			object-fit: contain;
 			border-radius: 10px;
 		}
-
-		/* img:hover {
-			transform: scale(1.05);
-			transition: 0.5s;
-		} */
 	}
 }
 
@@ -753,6 +752,8 @@ header {
 	height: 700px;
 }
 
+
+
 .film-infoBox {
 	display: flex;
 	align-items: center;
@@ -765,6 +766,14 @@ header {
 		width: 395px;
 		height: 539px;
 		border-radius: 10px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+			object-fit: cover;
+		}
 	}
 
 	.film-info {
@@ -799,29 +808,36 @@ header {
 		}
 
 		.film-raiting-box {
-			display: flex;
 			gap: 5px;
 			margin-top: 14px;
 
 			.film-raiting {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 5px;
+				width: 52px;
+				height: 52px;
+				position: relative;
+				background-color: rgba(75, 203, 54, 0.3);
+				border-radius: 50%;
 
-				raitings {
-					width: 52px;
-					height: 52px;
-					background-color: rgba(137, 203, 54, 0.3);
-					border-radius: 50%;
+				canvas {
+					width: 100%;
+					height: 100%;
 				}
 
 				span {
-					font-size: 15px;
-					font-weight: 500;
-					line-height: 100%;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					color: white;
+					transform: translate(-50%, -50%);
+					font-size: 18px;
+					font-weight: bold;
 				}
 			}
+		}
+
+		.film-raiting {
+			width: 52px;
+			height: 52px;
 		}
 
 		.film-description {
@@ -963,10 +979,17 @@ a:hover {
 
 	.actor {
 
-		img {
-			width: 208px;
-			height: 300px;
+		div {
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+				border-radius: 5px;
+				object-fit: cover;
+			}
 		}
+
 	}
 
 	.actor-info {
@@ -1015,7 +1038,7 @@ a:hover {
 			display: flex;
 			align-items: center;
 			gap: 20px;
-			
+
 			span {
 				font-size: 20px;
 				font-weight: 700;
@@ -1026,11 +1049,25 @@ a:hover {
 
 	.trailer-content {
 		margin-bottom: 26px;
+		position: relative;
+		height: 765px;
+		width: 100%;
 
 		iframe {
 			border-radius: 10px;
 			width: 100%;
 			height: 765px;
+		}
+
+		.thumbnail {
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			border-radius: 10px;
 		}
 	}
 
@@ -1072,12 +1109,12 @@ a:hover {
 	}
 }
 
-.posters-section {
+.gallery-section {
 	display: flex;
 	flex-direction: column;
-	gap: 53px;
+	gap: 30px;
 
-	.posters-header {
+	.gallery-header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -1102,7 +1139,7 @@ a:hover {
 		}
 	}
 
-	.posters-box {
+	.gallery-box {
 		display: flex;
 		flex-direction: column;
 		gap: 34px;
@@ -1113,29 +1150,39 @@ a:hover {
 			line-height: 100%;
 		}
 
-		.poster-grid {
+		.gallery {
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
-			column-gap: 22px;
+			grid-template-areas:
+				"box1 box1 box2 box3"
+				"box4 box5 box6 box6";
+			column-gap: 23px;
+			row-gap: 42px;
 
-			/* .poster {
-				max-width: 287px;
-				width: 100%;
+			.gallery-item {
+				background: transparent;
 				height: 462px;
-				overflow: hidden;
-				transition: transform 0.3s ease-in-out;
 				border-radius: 10px;
-				cursor: pointer;
+				overflow: hidden;
 
 				img {
+					width: 100%;
+					height: 100%;
+					border-radius: 10px;
 					object-fit: cover;
-					transition: 0.3s ease;
-					width: 287px;
-					height: 412px;
 				}
-			} */
+			}
 		}
+
 	}
+}
+
+.gallery-item:first-child {
+	grid-area: box1;
+}
+
+.gallery-item:last-child {
+	grid-area: box6;
 }
 
 .poster:hover img {
@@ -1162,4 +1209,9 @@ a:hover {
 		column-gap: 22px;
 
 	}
+}
+
+.film-container {
+	position: relative;
+	z-index: 5;
 }

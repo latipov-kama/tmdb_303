@@ -4,28 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="/src/style.css">
     <title>filmPage</title>
 </head>
 
 <body>
     <header class="container"></header>
-
+    <div class="main-img">
+        <img src="" alt="bg image" />
+    </div>
     <section class="film-container container">
         <div class="film-infoBox">
-            <div class="film-image"></div>
+            <div class="film-image">
+                <img src="" alt="" id="poster">
+            </div>
             <div class="film-info">
                 <div class="main-box">
                     <span>Главная ></span>
                     <span>Фильмы ></span>
-                    <span class="white">Побег из Претории</span>
+                    <span class="white"></span>
                 </div>
 
-                <div class="main-description"></div>
-                
+                <div class="main-description">
+                    <div class="header-box">
+                        <h1 id="title"></h1>
+                        <h3 id="originalTitle"></h3>
+                    </div>
+
+                    <div class="film-rating-box">
+                        <div class="film-rating">
+                            <canvas id="myChart"></canvas>
+                            <span id="ratingContent"></span>
+                        </div>
+                    </div>
+
+                    <div class="film-description">
+                        <p id="movieDescription"></p>
+                    </div>
+                </div>
+
                 <div class="links-box">
                     <button>
-                        <img src="play.svg" alt="play">
+                        <img src="/play.svg" alt="play">
                         Смотреть трейлер
                     </button>
                     <div class="social-links-box">
@@ -38,44 +58,41 @@
                 </div>
             </div>
         </div>
+
         <div class="info-table">
             <div class="first-table">
                 <table>
                     <tr>
                         <td>Год:</td>
-                        <td><a href="">2020</a></td>
+                        <td><a href="#" id="release_date"></a></td>
                     </tr>
                     <tr>
                         <td>Страна:</td>
-                        <td><a href="">Великобритания, Австралия</a></td>
+                        <td><a href="#" id="production_countries_name"></a></td>
                     </tr>
                     <tr>
                         <td>Слоган:</td>
-                        <td><a href="">«Подбери ключ к свободе»</a></td>
+                        <td><a href="#" id="tagline"></a></td>
                     </tr>
                     <tr>
                         <td>Режиссер:</td>
-                        <td><a href="#">Фрэнсис Аннан</a></td>
+                        <td><a href="#" id="director"></a></td>
                     </tr>
                     <tr>
                         <td>Сценарий:</td>
-                        <td><a href="#">Фрэнсис Аннан</a>, <a href="#">Л.Х. Адамс</a>, <a href="#">Кэрол Гриффитс,
-                                ...</a>
-                        </td>
+                        <td><a href="#" id="writers"></a></td>
                     </tr>
                     <tr>
                         <td>Продюсер:</td>
-                        <td><a href="#">Дэвид Баррон</a>, <a href="#">Марк Блэйни</a>, <a href="#">Гари Хэмилтон,
-                                ...</a>
-                        </td>
+                        <td><a href="#" id="producers"></a></td>
                     </tr>
                     <tr>
                         <td>Оператор:</td>
-                        <td><a href="#">Джеффри Холл</a></td>
+                        <td><a href="#" id="cinematographer"></a></td>
                     </tr>
                     <tr>
                         <td>Композитор:</td>
-                        <td><a href="#">Дэвид Хиршфелдер</a></td>
+                        <td><a href="#" id="composer"></a></td>
                     </tr>
                 </table>
             </div>
@@ -83,36 +100,35 @@
                 <table>
                     <tr>
                         <td>Художник:</td>
-                        <td><a href="#">Скотт Бёрд</a>, <a href="#">Эрика Брайан</a>, <a href="#">Мариот Керр, ...</a>
-                        </td>
+                        <td><a href="#" id="artists"></a>
                     </tr>
                     <tr>
                         <td>Монтаж:</td>
-                        <td><a href="#">Ник Фентон</a></td>
+                        <td><a href="#" id="editor"></a></td>
                     </tr>
                     <tr>
                         <td>Жанр:</td>
-                        <td><a href="#">Триллер, ...</a></td>
+                        <td><a href="#" id="genres"></a></td>
                     </tr>
                     <tr>
                         <td>Сборы в мире:</td>
-                        <td><a href="">$12 808</a></td>
+                        <td><a href="#" id="boxOffice"></a></td>
                     </tr>
                     <tr>
                         <td>Премьера (мир):</td>
-                        <td><a href="">1 марта 2020</a></td>
+                        <td><a href="#" id="worldPremiere"></a></td>
                     </tr>
                     <tr>
                         <td>Премьера (РФ):</td>
-                        <td><a href="">14 мая 2020</a></td>
+                        <td><a href="#" id="russia_premiere"></a></td>
                     </tr>
                     <tr>
                         <td>Возраст:</td>
-                        <td><a href="">16+</a></td>
+                        <td><a href="#" id="age_rating"></a></td>
                     </tr>
                     <tr>
                         <td>Время:</td>
-                        <td><a href="">106 мин. / 01:46</a></td>
+                        <td><a href="#" id="runtime"></a></td>
                     </tr>
                 </table>
             </div>
@@ -141,13 +157,13 @@
                 </div>
             </div>
             <div class="trailer-content">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/HG61U0_uLLA?si=LjFi5VzhrQPl0-vw"
-                    title="YouTube video player" frameborder="0"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="trailer-title">
-                <h3>Побег из Претории</h3>
+                <h3 id="film-title">Побег из Претории</h3>
                 <div class="social-links-box">
                     <a href=""><img src="/logo/vk.svg" alt="VK" /></a>
                     <a href=""><img src="/logo/instagram.svg" alt="Instagram" /></a>
@@ -159,17 +175,24 @@
         </div>
     </section>
 
-    <section class="posters-section container">
-        <div class="posters-header">
-            <h2>Постеры к фильму</h2>
+    <section class="gallery-section container">
+        <div class="gallery-header">
+            <h2>Кадры из фильма</h2>
             <div class="all-actors-link">
                 <span>Все постеры</span>
                 <img src="/arrow-r.svg" alt="">
             </div>
         </div>
-        <div class="posters-box">
-            <span class="movie-title">Побег из Претории</span>
-            <div class="poster-grid"></div>
+        <div class="gallery-box">
+            <span class="movie-title film-title"></span>
+            <div class="gallery">
+                <div class="gallery-item"><img src="" alt="" id="img1"></div>
+                <div class="gallery-item"><img src="" alt="" id="img2"></div>
+                <div class="gallery-item"><img src="" alt="" id="img3"></div>
+                <div class="gallery-item"><img src="" alt="" id="img4"></div>
+                <div class="gallery-item"><img src="" alt="" id="img5"></div>
+                <div class="gallery-item"><img src="" alt="" id="img6"></div>
+            </div>
         </div>
     </section>
 
@@ -178,7 +201,7 @@
         <div class="similar-movies-box"></div>
     </section>
 
-    <script type="module" src="/src/filmPage.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@ export function SimilarMovies(movie) {
     genre.textContent = movie.genre_ids.join(", ");
 
     const rating = document.createElement("span");
-    rating.textContent = movie.vote_average;
+    rating.textContent = movie.vote_average.toFixed(1);
     rating.classList.add("rating");
 
     imgBox.appendChild(img);
