@@ -66,7 +66,23 @@ function clickFilm(film) {
 
   new Chart(ctx, {
     type: "doughnut",
-    data: [10, film.vote_average],
+    data: {
+      datasets: [
+        {
+          data: [10, film.vote_avarage],
+          backgroundColor: ["#4BCB36", "#00000000"],
+          borderWidth: 0,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        tooltip: false,
+        legend: false,
+      },
+      cutout: "70%",
+    },
   });
 }
 
