@@ -129,7 +129,6 @@ header {
       cursor: pointer;
     }
     .data {
-      padding-top: 21px;
       .breadcrumb {
         display: flex;
         gap: 5px;
@@ -427,4 +426,10 @@ header {
   .div6 {
     grid-area: 2 / 2 / 3 / 3;
   }
+}
+.canvas {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: #2e6125b5;
 }

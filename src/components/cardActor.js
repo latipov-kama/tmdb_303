@@ -1,4 +1,6 @@
 export function ActorCard(actor) {
+  console.log(actor);
+  
   const actorCard = document.createElement("div");
   actorCard.classList.add("actor-card");
 
@@ -21,5 +23,9 @@ export function ActorCard(actor) {
   actorCard.appendChild(actorName);
   actorCard.appendChild(originalName);
   actorCard.appendChild(actorRole);
+  actorCard.onclick = () => {
+    localStorage.setItem('actorId', actor.id)
+    window.location.href = '/src/pages/cardPersons/'
+  }
   return actorCard
 }
