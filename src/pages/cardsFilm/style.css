@@ -504,3 +504,21 @@ header {
   display: block;
   color: #f2f60f;
 }
+
+.Actor {
+  margin-left: 345px;
+  margin-top: -350px;
+}
+
+.breadcrum {
+  margin-top: -30px;
+}
+
+.post {
+  border-radius: 10px;
+}
+
+.textss {
+  font-size: 50px;
+  margin-top:50px;
+}

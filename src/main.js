@@ -5,10 +5,10 @@ import { Genre } from "./components/Genre";
 import { createFilmsElement } from "./components/films";
 import { createPopularPersonElement } from "./components/popularPersons";
 
+
 const moviesGrind = document.querySelector(".movies-grind");
 const upcomingGrind = document.querySelector(".moviesGrid");
 const genresBox = document.querySelector(".categories");
-
 // const showMoreBtn = document.querySelector(".view-all");
 
 const getNowPlaying = api.get("movie/now_playing");
@@ -32,6 +32,5 @@ Promise.all([getNowPlaying, getPopular, getUpcoming, getGenres, popularPerson])
 		// fro trailers
 		render(upcoming.data.results, films, createFilmsElement);
 		render(person.data.results.slice(0, 2), personsWrapper, createPopularPersonElement)
-		
 	})
 	.catch((error) => console.error(error));

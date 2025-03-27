@@ -21,5 +21,13 @@ export function ActorCard(actor) {
   actorCard.appendChild(actorName);
   actorCard.appendChild(originalName);
   actorCard.appendChild(actorRole);
+
+
+  actorCard.onclick = () => {
+    window.location.href = '/src/pages/cardsFilm/PersonFilm/'
+  }
   return actorCard
 }
+
+
+

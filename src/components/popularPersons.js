@@ -27,3 +27,4 @@ export function createPopularPersonElement(persons) {
 
   return personDiv;
 }
+
