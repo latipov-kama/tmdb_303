@@ -24,7 +24,7 @@ export function ActorCard(actor) {
 
 
   actorCard.onclick = () => {
-    window.location.href = '/src/pages/cardsFilm/PersonFilm/'
+    window.location.href = '/src/pages/PersonFilm/'
   }
   return actorCard
 }

@@ -29,7 +29,7 @@ Promise.all([filmClik, staff, cadr, similar])
 
 function click(film) {
   let pathImg = document.querySelector(".path");
-  pathImg.src = `https://image.tmdb.org/t/p/original${film.backdrop_path}`;
+  // pathImg.src = `https://image.tmdb.org/t/p/original${film.backdrop_path}`;
 
   let posterImg = document.querySelector(".poster");
   posterImg.src = `https://image.tmdb.org/t/p/original${film.poster_path}`;
