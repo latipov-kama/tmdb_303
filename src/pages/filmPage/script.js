@@ -104,22 +104,20 @@ function Description(data) {
     genres.textContent = data.genres ? data.genres.map(genre => genre.name).join(", ") : "Нет данных";
 
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const boxOffice = document.querySelector("#boxOffice");
-        boxOffice.textContent = data.revenue ? `$${data.revenue.toLocaleString()}` : "Нет информации";
+    const boxOffice = document.querySelector("#boxOffice");
+    boxOffice.textContent = data.revenue ? `$${data.revenue.toLocaleString()}` : "Нет информации";
 
-        const worldPremiere = document.querySelector("#worldPremiere");
-        worldPremiere.textContent = data.release_date || "Нет данных";
+    const worldPremiere = document.querySelector("#worldPremiere");
+    worldPremiere.textContent = data.release_date || "Нет данных";
 
-        const russiaPremiere = document.querySelector("#russia_premiere");
-        russiaPremiere.textContent = data.release_date || "Нет данных";
+    const russiaPremiere = document.querySelector("#russia_premiere");
+    russiaPremiere.textContent = data.release_date || "Нет данных";
 
-        const ageRating = document.querySelector("#age_rating");
-        ageRating.textContent = data.age_rating || "Нет данных";
+    const ageRating = document.querySelector("#age_rating");
+    ageRating.textContent = data.age_rating || "Нет данных";
 
-        const runtime = document.querySelector("#runtime");
-        runtime.textContent = data.runtime ? `${data.runtime} мин.` : "Нет данных";
-    });
+    const runtime = document.querySelector("#runtime");
+    runtime.textContent = data.runtime ? `${data.runtime} мин.` : "Нет данных";
 
     const ratingContent = document.querySelector("#ratingContent");
     ratingContent.textContent = data.vote_average.toFixed(1);
@@ -153,7 +151,7 @@ function Description(data) {
                 tooltip: { enabled: false },
                 legend: { display: false },
             },
-            cutout: '70%',
+            cutout: '75%',
         }
     });
 

@@ -26,5 +26,9 @@ export function Starring(actor) {
     infoDiv.append(nameRu, nameEn, role);
     div.append(imgDiv, infoDiv);
 
+    div.onclick = () => {
+        window.location.href = `/src/pages/actorPage/?id=${actor.id}`;
+    };
+
     return div;
 };

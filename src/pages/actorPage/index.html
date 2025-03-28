@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>actorPage</title>
+</head>
+
+<body>
+    <header class="container"></header>
+
+    <section class="film-container container">
+        <div class="actor-infoBox">
+            <div class="film-image">
+                <img src="" alt="" id="actorImage">
+            </div>
+            <div class="film-info">
+                <div class="main-box">
+                    <span>Главная ></span>
+                    <span>Актёры ></span>
+                    <span class="actorName"></span>
+                </div>
+
+                <div class="main-description">
+                    <div class="header-box">
+                        <h1 id="actorName"></h1>
+                        <h3 id="originalName"></h3>
+                    </div>
+
+                    <div class="actor-information">
+                        <table>
+                            <tr>
+                                <th class="active">Информация</th>
+                                <th>Биография</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Карьера:</strong></td>
+                                <td><a href="#" id="career"></a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Рост:</strong></td>
+                                <td><a href="#" id="height"></a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Дата рождения:</strong></td>
+                                <td><a href="#" id="birthday"></a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Место рождения:</strong></td>
+                                <td><a href="#" id="place_of_birth"></a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Жанры:</strong></td>
+                                <td><a href="#" id="genres"></a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Всего фильмов:</strong></td>
+                                <td><a href="#" id="totalFilms"></a></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="favorite">
+                        <button>
+                            <img src="/save-icon.svg" alt="">
+                        </button>
+                        <span>В избранном у 37933 человек</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="expected-movies container">
+        <div class="header">
+            <h2>Лучшие фильмы</h2>
+            <div class="arrows">
+                <button class="btn-to-left">
+                    <img src="/arrow-l.svg" alt="" />
+                </button>
+                <span>4 / 15</span>
+                <button class="btn-to-right">
+                    <img src="/arrow-r.svg" alt="" />
+                </button>
+            </div>
+        </div>
+        <div class="moviesGrid container"></div>
+    </section>
+
+    <section class="gallery-section container actor-gallery">
+        <div class="gallery-header">
+            <div class="main">
+                <h2>Фото</h2>
+                <span id="actor-name"></span>
+            </div>
+            <div class="all-actors-link">
+                <span>Все фото</span>
+                <img src="/arrow-r.svg" alt="">
+            </div>
+        </div>
+        <div class="gallery-box">
+            <span class="movie-title film-title"></span>
+            <div class="gallery">
+                <div class="gallery-item"><img src="" alt="" id="img1"></div>
+                <div class="gallery-item"><img src="" alt="" id="img2"></div>
+                <div class="gallery-item"><img src="" alt="" id="img3"></div>
+                <div class="gallery-item"><img src="" alt="" id="img4"></div>
+                <div class="gallery-item"><img src="" alt="" id="img5"></div>
+                <div class="gallery-item"><img src="" alt="" id="img6"></div>
+            </div>
+        </div>
+    </section>
+
+    <img src="/public/Arrow.svg" alt="">
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

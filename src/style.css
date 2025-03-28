@@ -692,7 +692,7 @@ header {
 			}
 		}
 
-		h1 {
+		h2 {
 			font-size: 50px;
 			font-weight: 900;
 			line-height: 100%;
@@ -752,7 +752,8 @@ header {
 	height: 700px;
 }
 
-.film-infoBox {
+.film-infoBox,
+.actor-infoBox {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -785,14 +786,15 @@ header {
 				color: rgba(79, 91, 124, 1);
 			}
 
-			.white {
+			.white,
+			.actorName {
 				color: white;
 			}
 		}
 
 		.header-box {
 			h1 {
-				font-size: 48px;
+				font-size: 65px;
 				line-height: 100%;
 				font-weight: 900;
 				margin-bottom: 10px;
@@ -809,7 +811,7 @@ header {
 			gap: 5px;
 			margin-top: 14px;
 
-			
+
 		}
 
 		.film-raiting {
@@ -909,11 +911,6 @@ header {
 	margin-top: 45px;
 	padding: 45px 100px;
 
-	table {
-		width: 100%;
-		border-collapse: collapse;
-	}
-
 	.first-table,
 	.second-table {
 		width: 50%;
@@ -929,9 +926,42 @@ header {
 		font-weight: 500;
 	}
 
+
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+
 	a {
 		color: #ffd700;
 		text-decoration: none;
+	}
+}
+
+.actor-information {
+	table {
+		max-width: 619px;
+
+		th {
+			text-align: start;
+			color: rgb(111, 118, 141);
+			cursor: pointer;
+		}
+
+		th,
+		td {
+			padding: 10px;
+		}
+
+		strong {
+			color: #ccc;
+		}
+
+		.active {
+			color: #FFFFFF;
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -1114,13 +1144,26 @@ a:hover {
 
 	.gallery-header {
 		display: flex;
-		align-items: center;
+		align-items: start;
 		justify-content: space-between;
 
 		h2 {
 			font-size: 48px;
 			font-weight: 900;
 			line-height: 100%;
+		}
+
+		.main {
+			display: flex;
+			flex-direction: column;
+			gap: 37px;
+
+
+			span {
+				font-size: 25px;
+				line-height: 100%;
+				font-weight: 600;
+			}
 		}
 
 		.all-actors-link {
@@ -1174,6 +1217,10 @@ a:hover {
 	}
 }
 
+.actor-gallery {
+	margin-bottom: 100px;
+}
+
 .gallery-item:first-child {
 	grid-area: box1;
 }
@@ -1210,4 +1257,31 @@ a:hover {
 .film-container {
 	position: relative;
 	z-index: 5;
+}
+
+.header-box {
+	margin-bottom: 31px;
+}
+
+.favorite {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-top: 31px;
+	cursor: pointer;
+
+	button {
+		width: 58px;
+		height: 58px;
+		border: none;
+		border-radius: 10px;
+		background-color: rgba(27, 33, 51, 1);
+		cursor: pointer;
+	}
+
+	span {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 100%;
+	}
 }

@@ -14,12 +14,14 @@ export function createFilmsElement(films) {
 	div.appendChild(p);
 
 	let iframe = document.querySelector("iframe");
+	let trailerTitle = document.querySelector("#trailerTitle");
 
 	div.onclick = () => {
 		api.get(`/movie/${films.id}/videos`).then((res) => {
 			let trailer = res.data.results.find((item) => item.type == "Trailer");
 			if (trailer) {
 				iframe.src = `https://www.youtube.com/embed/${trailer.key}`;
+				trailerTitle.textContent = films.title;
 			} else {
 				alert("У этого фильма нет трейлера");
 			}
