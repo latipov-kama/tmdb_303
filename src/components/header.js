@@ -1,7 +1,7 @@
 export function header() {
-    let header = document.querySelector('.container');
+	let header = document.querySelector(".container");
 
-    header.innerHTML = `
+	header.innerHTML = `
     <div class="logo">
 			<img src="/logo.svg" alt="" />
 			<img src="/social-links.svg" alt="" />
@@ -23,7 +23,17 @@ export function header() {
 			</button>
 			<button class="sign-in">Войти</button>
 		</div>
-    `
+    `;
 
-    let img = document.querySelector('img.logo');
-};
+	let close = document.querySelector(".close");
+	let search = document.querySelector(".search");
+	let dialog = document.querySelector("dialog");
+
+	search.onclick = () => {
+		dialog.showModal();
+	};
+
+	close.onclick = () => {
+		dialog.close();
+	};
+}

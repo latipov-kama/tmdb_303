@@ -1,129 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/style.css" />
+		<title>Kinoarea</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./src/style.css" />
-	<title>Kinoarea</title>
-</head>
+	<body>
+		<header class="container"></header>
 
-<body>
-	<header class="container"></header>
-
-	<main>
-		<div class="main-img">
-			<img src="/background-img.svg" alt="bg image" />
-		</div>
-		<section class="now-in-cinema container">
-			<div class="movies-filter">
-				<h1>Сейчас в кино</h1>
-				<span class="line"></span>
-
-				<div class="categories"></div>
-			</div>
-
-			<div class="movies-grind container"></div>
-			<button class="view-all">Все новинки</button>
-		</section>
-		<section class="new-trailers container">
-			<div class="text">
-				<h1>Новые трейлеры</h1>
-				<div>
-					<p>Все трейлеры</p>
-					<img src="/Arrow 1.svg" alt="" />
+		<dialog>
+			<button class="close">X</button>
+			<div class="search_modal">
+				<div class="search_input">
+					<input type="text" />
 				</div>
-			</div>
-			<div class="trailer">
-				<div class="iframe">
-					<iframe width="100%" height="615" src="https://www.youtube.com/embed/"
-					title="YouTube video player" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+				<div class="search_categories">
+					<div class="active">Фильмы</div>
+					<div>Сериалы</div>
+					<div>Персоны</div>
 				</div>
-				<div>
-					<div class="trailer-name">
-						<h1 id="trailerTitle"></h1>
-						<div class="message">
-							<img src="/image-Photoroom.png" alt="" />
-							<img src="/image-Photoroom (2).png" alt="" />
-							<img src="/image-Photoroom (3).png" alt="" />
-							<img src="/image-Photoroom (4).png" alt="" />
-							<img src="/image-Photoroom (5).png" alt="" />
+
+				<div class="search_content">
+					<h2>Фильмы</h2>
+					<div class="search_box">
+						<div class="search_item">
+							<img
+								src="https://image.tmdb.org/t/p/w400/gybr2uUoI6yLnfv1s0wcJJ9HGmp.jpg"
+								alt="poster"
+							/>
+
+							<div class="">
+								<h3 class="name">Name</h3>
+								<p class="genres">genres</p>
+							</div>
+						</div>
+						<div class="search_item">
+							<img
+								src="https://image.tmdb.org/t/p/w400/gybr2uUoI6yLnfv1s0wcJJ9HGmp.jpg"
+								alt="poster"
+							/>
+
+							<div class="">
+								<h3 class="name">Name</h3>
+								<p class="genres">genres</p>
+							</div>
+						</div>
+						<div class="search_item">
+							<img
+								src="https://image.tmdb.org/t/p/w400/gybr2uUoI6yLnfv1s0wcJJ9HGmp.jpg"
+								alt="poster"
+							/>
+
+							<div class="">
+								<h3 class="name">Name</h3>
+								<p class="genres">genres</p>
+							</div>
 						</div>
 					</div>
-					<div class="trailer-like">
-						<div class="like">
-							<div><img src="/like 1.png" alt="" /></div>
-							<p>3 245</p>
-						</div>
-						<div class="deslike">
-							<div><img src="/like 1 (1).png" alt="" /></div>
-							<p>420</p>
-						</div>
+				</div>
+			</div>
+		</dialog>
+
+		<main>
+			<div class="main-img">
+				<img src="/background-img.svg" alt="bg image" />
+			</div>
+			<section class="now-in-cinema container">
+				<div class="movies-filter">
+					<h1>Сейчас в кино</h1>
+					<span class="line"></span>
+
+					<div class="categories"></div>
+				</div>
+
+				<div class="movies-grind container"></div>
+				<button class="view-all">Все новинки</button>
+			</section>
+			<section class="new-trailers container">
+				<div class="text">
+					<h1>Новые трейлеры</h1>
+					<div>
+						<p>Все трейлеры</p>
+						<img src="/Arrow 1.svg" alt="" />
 					</div>
 				</div>
-				<div class="films"></div>
-			</div>
-		</section>
-		<section class="popular-films container">
-			<div class="texts">
-				<h2>Популярные фильмы</h2>
-				<div class="tire"></div>
-				<div class="time">
-					<p>Всё время</p>
-					<p>2020</p>
-					<p>2019</p>
-					<p>2018</p>
-					<p>2017</p>
-					<p>2016</p>
-					<p>2015</p>
+				<div class="trailer">
+					<div class="iframe">
+						<iframe
+							width="100%"
+							height="615"
+							src="https://www.youtube.com/embed/"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						></iframe>
+					</div>
+					<div>
+						<div class="trailer-name">
+							<h1 id="trailerTitle"></h1>
+							<div class="message">
+								<img src="/image-Photoroom.png" alt="" />
+								<img src="/image-Photoroom (2).png" alt="" />
+								<img src="/image-Photoroom (3).png" alt="" />
+								<img src="/image-Photoroom (4).png" alt="" />
+								<img src="/image-Photoroom (5).png" alt="" />
+							</div>
+						</div>
+						<div class="trailer-like">
+							<div class="like">
+								<div><img src="/like 1.png" alt="" /></div>
+								<p>3 245</p>
+							</div>
+							<div class="deslike">
+								<div><img src="/like 1 (1).png" alt="" /></div>
+								<p>420</p>
+							</div>
+						</div>
+					</div>
+					<div class="films"></div>
 				</div>
-			</div>
-			<div class="top-films"></div>
-		</section>
-		<section class="popular-persons container">
-			<h2>Популярные персоны</h2>
-			<div class="celebrities"></div>
-		</section>
-		<section class="expected-movies container">
-			<div class="header">
-				<h2>Ожидаемые новинки</h2>
-				<div class="arrows">
-					<button class="btn-to-left">
-						<img src="/arrow-l.svg" alt="" />
-					</button>
-					<span>2 / 5</span>
-					<button class="btn-to-right">
-						<img src="/arrow-r.svg" alt="" />
-					</button>
+			</section>
+			<section class="popular-films container">
+				<div class="texts">
+					<h2>Популярные фильмы</h2>
+					<div class="tire"></div>
+					<div class="time">
+						<p>Всё время</p>
+						<p>2020</p>
+						<p>2019</p>
+						<p>2018</p>
+						<p>2017</p>
+						<p>2016</p>
+						<p>2015</p>
+					</div>
 				</div>
+				<div class="top-films"></div>
+			</section>
+			<section class="popular-persons container">
+				<h2>Популярные персоны</h2>
+				<div class="celebrities"></div>
+			</section>
+			<section class="expected-movies container">
+				<div class="header">
+					<h2>Ожидаемые новинки</h2>
+					<div class="arrows">
+						<button class="btn-to-left">
+							<img src="/arrow-l.svg" alt="" />
+						</button>
+						<span>2 / 5</span>
+						<button class="btn-to-right">
+							<img src="/arrow-r.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<div class="moviesGrid container"></div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="social-icons">
+				<a href=""><img src="/logo/vk.svg" alt="VK" /></a>
+				<a href=""><img src="/logo/instagram.svg" alt="Instagram" /></a>
+				<a href=""><img src="/logo/facebook.svg" alt="Facebook" /></a>
+				<a href=""><img src="/logo/twitter.svg" alt="Twitter" /></a>
+				<a href=""><img src="/logo/youtube.svg" alt="YouTube" /></a>
 			</div>
-			<div class="moviesGrid container"></div>
-		</section>
-	</main>
+			<nav class="footer-nav">
+				<a href="">Афиша</a>
+				<a href="">Новости</a>
+				<a href="">Персоны</a>
+				<a href="">Рейтинги</a>
+				<a href="">Рецензии</a>
+				<a href="">Каталог фильмов</a>
+			</nav>
+			<p class="copyright">2020 © Kinoarea. Все права защищены</p>
+			<a href="#" class="privacy-policy">Политика конфиденциальности</a>
+		</footer>
 
-	<footer class="footer">
-		<div class="social-icons">
-			<a href=""><img src="/logo/vk.svg" alt="VK" /></a>
-			<a href=""><img src="/logo/instagram.svg" alt="Instagram" /></a>
-			<a href=""><img src="/logo/facebook.svg" alt="Facebook" /></a>
-			<a href=""><img src="/logo/twitter.svg" alt="Twitter" /></a>
-			<a href=""><img src="/logo/youtube.svg" alt="YouTube" /></a>
-		</div>
-		<nav class="footer-nav">
-			<a href="">Афиша</a>
-			<a href="">Новости</a>
-			<a href="">Персоны</a>
-			<a href="">Рейтинги</a>
-			<a href="">Рецензии</a>
-			<a href="">Каталог фильмов</a>
-		</nav>
-		<p class="copyright">2020 © Kinoarea. Все права защищены</p>
-		<a href="#" class="privacy-policy">Политика конфиденциальности</a>
-	</footer>
-
-	<script type="module" src="/src/main.js"></script>
-</body>
-
+		<script type="module" src="/src/main.js"></script>
+	</body>
 </html>
