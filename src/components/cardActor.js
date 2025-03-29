@@ -1,6 +1,4 @@
-export function ActorCard(actor) {
-  console.log(actor);
-  
+export function ActorCard(actor) {  
   const actorCard = document.createElement("div");
   actorCard.classList.add("actor-card");
 

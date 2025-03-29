@@ -4,7 +4,9 @@ import { MovieCard } from "./components/MovieCard";
 import { Genre } from "./components/Genre";
 import { createFilmsElement } from "./components/films";
 import { createPopularPersonElement } from "./components/popularPersons";
+import { header } from "./components/header";
 
+header()
 const moviesGrind = document.querySelector(".movies-grind");
 const upcomingGrind = document.querySelector(".moviesGrid");
 const genresBox = document.querySelector(".categories");

@@ -2,7 +2,9 @@ import { Chart } from "Chart.js/auto";
 import { ActorCard } from "../../components/cardActor";
 import { render } from "../../libs/utils";
 import { api } from "/src/services/api.js";
+import { header } from "../../components/header";
 
+header();
 const id = localStorage.getItem("movieId");
 const filmClik = api.get(`movie/${id}`);
 const staff = api.get(`movie/${id}/credits`);
@@ -53,6 +55,9 @@ function clickFilm(film) {
   let genresP = document.querySelector(".genres");
   genresP.textContent = film.genres[0].name + "," + " " + "...";
 
+  let ratingContent = document.querySelector("#ratingContent");
+  ratingContent.textContent = film.vote_average.toFixed(1);
+
   let iframe = document.querySelector("iframe");
   api.get(`/movie/${film.id}/videos`).then((res) => {
     let trailer = res.data.results.find((item) => item.type == "Trailer");
@@ -69,7 +74,7 @@ function clickFilm(film) {
     data: {
       datasets: [
         {
-          data: [10, film.vote_avarage],
+          data: [10, film.vote_average],
           backgroundColor: ["#4BCB36", "#00000000"],
           borderWidth: 0,
         },
@@ -78,10 +83,10 @@ function clickFilm(film) {
     options: {
       responsive: true,
       plugins: {
-        tooltip: false,
-        legend: false,
+        tooltip: { enabled: false },
+        legend: { display: false },
       },
-      cutout: "70%",
+      cutout: "75%",
     },
   });
 }

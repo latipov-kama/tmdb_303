@@ -1,7 +1,9 @@
 import { api } from "../../services/api";
 import { render } from "../../libs/utils";
 import { PersonFilm } from "../../components/personFilm";
+import { header } from "../../components/header";
 
+header()
 let id = localStorage.getItem("actorId");
 
 let person = api.get(`/person/${id}`);
@@ -35,7 +37,7 @@ function PersonInfo(actor, film) {
   career.textContent = actor.known_for_department;
 
   let height = document.querySelector('.height')
-  height.textContent = '180';
+  height.textContent = 'нет данных';
 
   let birthday = document.querySelector('.birthday')
   birthday.textContent = actor.birthday
