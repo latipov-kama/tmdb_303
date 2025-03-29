@@ -297,7 +297,7 @@ header {
 	margin-bottom: 63px;
 }
 
-.persons-wrapper {
+.persons-container {
 	display: grid;
 	grid-auto-rows: 420px;
 	grid-template-columns: repeat(3, 1fr);

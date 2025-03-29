@@ -3,8 +3,8 @@ import { render } from "./libs/utils";
 import { MovieCard } from "./components/MovieCard";
 import { Genre } from "./components/Genre";
 import { createFilmsElement } from "./components/films";
-import { createPopularPersonElement } from "./components/popularPersons";
 import { header } from "./components/header";
+import { createPersonsList } from "./components/celebrities";
 
 header()
 const moviesGrind = document.querySelector(".movies-grind");
@@ -33,7 +33,7 @@ Promise.all([getNowPlaying, getPopular, getUpcoming, getGenres, popularPerson])
 
 		// fro trailers
 		render(upcoming.data.results, films, createFilmsElement);
-		render(person.data.results.slice(0, 2), personsWrapper, createPopularPersonElement)
+		personsWrapper.appendChild(createPersonsList(popular.data.results.slice(0, 6)));
 		
 	})
 	.catch((error) => console.error(error));
